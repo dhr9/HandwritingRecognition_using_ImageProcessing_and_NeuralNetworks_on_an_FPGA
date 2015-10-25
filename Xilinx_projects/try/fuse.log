@@ -1,0 +1,10 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/Xilinx_projects/try/or_gate_isim_beh.exe -prj D:/Xilinx_projects/try/or_gate_beh.prj work.or_gate work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Xilinx_projects/try/or_gate.v" into library work
+ERROR:HDLCompiler:1660 - "D:/Xilinx_projects/try/or_gate.v" Line 29: Procedural assignment to a non-register Y is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:1660 - "D:/Xilinx_projects/try/or_gate.v" Line 29: Procedural assignment to a non-register Y is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:598 - "D:/Xilinx_projects/try/or_gate.v" Line 21: Module <or_gate> ignored due to previous errors.
+Verilog file D:/Xilinx_projects/try/or_gate.v ignored due to errors

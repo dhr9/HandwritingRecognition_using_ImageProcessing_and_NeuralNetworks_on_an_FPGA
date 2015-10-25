@@ -1,0 +1,20 @@
+ISim log file
+Running: D:\Xilinx_projects\FullAdder1Bit\TestBench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Xilinx_projects/FullAdder1Bit/TestBench_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+time =0 	INPUT VALUES: 	 A =0 B =0 CIN =0 	 output value SUM=0 COUT =0 
+Finished circuit initialization process.
+time =2000 	INPUT VALUES: 	 A =0 B =1 CIN =0 	 output value SUM=1 COUT =0 
+time =6000 	INPUT VALUES: 	 A =1 B =1 CIN =0 	 output value SUM=0 COUT =1 
+time =8000 	INPUT VALUES: 	 A =0 B =0 CIN =1 	 output value SUM=1 COUT =0 
+time =10000 	INPUT VALUES: 	 A =0 B =1 CIN =1 	 output value SUM=0 COUT =1 
+time =14000 	INPUT VALUES: 	 A =1 B =1 CIN =1 	 output value SUM=1 COUT =1 
+Stopped at time : 16 ns : File "D:/Xilinx_projects/FullAdder1Bit/TestBench.v" Line 53
