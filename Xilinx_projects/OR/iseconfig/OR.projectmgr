@@ -64,13 +64,13 @@
          <ClosedNode>/stimulus D:|Xilinx_projects|OR|stimulus.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>stimulus2 (C:/Users/dhrre/Desktop/Projects/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR/stimulus2.v)</SelectedItem>
+         <SelectedItem>stimulus (C:/Users/dhrre/Desktop/Projects/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR/stimulus.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000159000000020000000000000000000000000200000064ffffffff000000810000000300000002000001590000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>stimulus2 (C:/Users/dhrre/Desktop/Projects/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR/stimulus2.v)</CurrentItem>
+      <CurrentItem>stimulus (C:/Users/dhrre/Desktop/Projects/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR/stimulus.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -78,13 +78,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>

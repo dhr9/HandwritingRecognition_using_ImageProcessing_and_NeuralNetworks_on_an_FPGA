@@ -72,6 +72,7 @@ module stimulus;
 		i2 = 0;
 		i1 = 0;
 		
+		
 	end
    
 	initial begin
