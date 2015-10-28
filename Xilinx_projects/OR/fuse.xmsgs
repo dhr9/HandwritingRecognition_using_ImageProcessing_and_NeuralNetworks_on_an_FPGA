@@ -5,13 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="1660" delta="unknown" >"D:/Xilinx_projects/OR/stimulus2.v" Line 67: Procedural assignment to a non-register <arg fmt="%s" index="1">j</arg> is not permitted, left-hand side should be reg/integer/time/genvar
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/dhrre/Desktop/Projects/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR/stimulus2.v" Line 68: Syntax error near &quot;<arg fmt="%s" index="1">genvar</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1660" delta="unknown" >"D:/Xilinx_projects/OR/stimulus2.v" Line 67: Procedural assignment to a non-register <arg fmt="%s" index="1">j</arg> is not permitted, left-hand side should be reg/integer/time/genvar
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/dhrre/Desktop/Projects/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR/stimulus2.v" Line 71: Syntax error near &quot;<arg fmt="%s" index="1">endgenerate</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="unknown" >"D:/Xilinx_projects/OR/stimulus2.v" Line 25: Module &lt;<arg fmt="%s" index="1">stimulus2</arg>&gt; ignored due to previous errors.
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/Users/dhrre/Desktop/Projects/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR/stimulus2.v" Line 69: &lt;<arg fmt="%s" index="1">j</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="598" delta="unknown" >"C:/Users/dhrre/Desktop/Projects/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR/stimulus2.v" Line 25: Module &lt;<arg fmt="%s" index="1">stimulus2</arg>&gt; ignored due to previous errors.
 </msg>
 
 </messages>
