@@ -9,7 +9,7 @@ Target Device  : xc3s100e
 Target Package : cp132
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sun Oct 25 10:40:25 2015
+Mapped Date    : Wed Oct 28 11:23:54 2015
 
 Mapping design into LUTs...
 Running directed packing...
@@ -31,13 +31,13 @@ Logic Distribution:
     Number of Slices containing unrelated logic:          0 out of       1   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
   Total Number of 4 input LUTs:           1 out of   1,920    1%
-  Number of bonded IOBs:                  3 out of      83    3%
+  Number of bonded IOBs:                  4 out of      83    4%
 
 Average Fanout of Non-Clock Nets:                1.00
 
 Peak Memory Usage:  292 MB
-Total REAL time to MAP completion:  6 secs 
-Total CPU time to MAP completion:   2 secs 
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   1 secs 
 
 NOTES:
 

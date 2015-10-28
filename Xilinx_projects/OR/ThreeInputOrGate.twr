@@ -44,12 +44,13 @@ Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-i1             |gateOutput     |    6.119|
-i3             |gateOutput     |    5.929|
+i1             |gateOutput     |    6.050|
+i2             |gateOutput     |    5.910|
+i3             |gateOutput     |    5.879|
 ---------------+---------------+---------+
 
 
-Analysis completed Sun Oct 25 10:40:44 2015 
+Analysis completed Wed Oct 28 11:24:12 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

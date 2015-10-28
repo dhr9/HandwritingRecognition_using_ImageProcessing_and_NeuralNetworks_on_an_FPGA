@@ -47,6 +47,7 @@ module stimulus2;
 
 		// Wait 100 ns for global reset to finish
 		#100;
+		
    end 
 	genvar i;
 	generate for (i = 0; i < 8 ; i = i+1)
@@ -59,7 +60,7 @@ module stimulus2;
 	endgenerate
 	// Add stimulus here
 /*		#50 i1 = 1;
-		#50 i1 = 0;
+		#50 i1 = 0; 
 		#60 i3 = 1; */
 		
   

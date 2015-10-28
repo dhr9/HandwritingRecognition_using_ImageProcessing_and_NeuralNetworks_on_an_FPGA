@@ -25,5 +25,5 @@ module ThreeInputOrGate(
     output gateOutput
     );
 
-or(gateOutput, i1 , 12 , i3);
+or(gateOutput, i1 , i2 , i3);
 endmodule

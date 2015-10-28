@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-JARVIS::  Sun Oct 25 10:40:34 2015
+DHR::  Wed Oct 28 11:24:03 2015
 
 par -w -intstyle ise -ol high -t 1 ThreeInputOrGate_map.ncd
 ThreeInputOrGate.ncd ThreeInputOrGate.pcf 
@@ -25,11 +25,11 @@ Device speed data version:  "PRODUCTION 1.27 2013-10-13".
 
 Design Summary Report:
 
- Number of External IOBs                           3 out of 83      3%
+ Number of External IOBs                           4 out of 83      4%
 
-   Number of External Input IOBs                  2
+   Number of External Input IOBs                  3
 
-      Number of External Input IBUFs              2
+      Number of External Input IBUFs              3
 
    Number of External Output IOBs                 1
 
@@ -48,54 +48,54 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 2 secs 
-Finished initial Timing Analysis.  REAL time: 2 secs 
+Starting initial Timing Analysis.  REAL time: 1 secs 
+Finished initial Timing Analysis.  REAL time: 1 secs 
 
 
 Starting Placer
 Total REAL time at the beginning of Placer: 2 secs 
-Total CPU  time at the beginning of Placer: 1 secs 
+Total CPU  time at the beginning of Placer: 0 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:b) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:f) REAL time: 3 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:b) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:f) REAL time: 3 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:b) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:f) REAL time: 3 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-.............
-Phase 4.2  Initial Clock and IO Placement (Checksum:b) REAL time: 3 secs 
+...........
+Phase 4.2  Initial Clock and IO Placement (Checksum:f) REAL time: 3 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:b) REAL time: 3 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:f) REAL time: 3 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:b) REAL time: 3 secs 
+Phase 6.36  Local Placement Optimization (Checksum:f) REAL time: 3 secs 
 
 Phase 7.3  Local Placement Optimization
-............
-Phase 7.3  Local Placement Optimization (Checksum:a65b39) REAL time: 3 secs 
+...........
+Phase 7.3  Local Placement Optimization (Checksum:14e93c5) REAL time: 3 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:a65b39) REAL time: 3 secs 
+Phase 8.5  Local Placement Optimization (Checksum:14e93c5) REAL time: 3 secs 
 
 Phase 9.8  Global Placement
 ..
-Phase 9.8  Global Placement (Checksum:13c2899) REAL time: 4 secs 
+Phase 9.8  Global Placement (Checksum:21688d1) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:13c2899) REAL time: 4 secs 
+Phase 10.5  Local Placement Optimization (Checksum:21688d1) REAL time: 3 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:13c2899) REAL time: 4 secs 
+Phase 11.18  Placement Optimization (Checksum:21688d1) REAL time: 3 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:13c2899) REAL time: 4 secs 
+Phase 12.5  Local Placement Optimization (Checksum:21688d1) REAL time: 3 secs 
 
-Total REAL time to Placer completion: 4 secs 
+Total REAL time to Placer completion: 3 secs 
 Total CPU  time to Placer completion: 1 secs 
 Writing design to file ThreeInputOrGate.ncd
 
@@ -104,9 +104,9 @@ Writing design to file ThreeInputOrGate.ncd
 Starting Router
 
 
-Phase  1  : 3 unrouted;      REAL time: 5 secs 
+Phase  1  : 4 unrouted;      REAL time: 5 secs 
 
-Phase  2  : 3 unrouted;      REAL time: 5 secs 
+Phase  2  : 4 unrouted;      REAL time: 5 secs 
 
 Phase  3  : 0 unrouted;      REAL time: 5 secs 
 
@@ -116,16 +116,16 @@ Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 5
 
 Updating file: ThreeInputOrGate.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
-Total REAL time to Router completion: 6 secs 
-Total CPU time to Router completion: 3 secs 
+Total REAL time to Router completion: 5 secs 
+Total CPU time to Router completion: 1 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -144,10 +144,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 6 secs 
-Total CPU time to PAR completion: 3 secs 
+Total REAL time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 2 secs 
 
-Peak Memory Usage:  292 MB
+Peak Memory Usage:  291 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
