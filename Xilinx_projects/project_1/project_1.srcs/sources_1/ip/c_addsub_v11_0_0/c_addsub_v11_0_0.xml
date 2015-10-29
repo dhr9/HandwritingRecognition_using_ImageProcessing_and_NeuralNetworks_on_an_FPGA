@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>c_addsub_v11_0_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>a_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>a</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>clk_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="immediate" spirit:id="BUSIFPARAM_VALUE.CLK_INTF.ASSOCIATED_BUSIF">s:c_out:sinit:sset:bypass:c_in:add:b:a</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:resolve="immediate" spirit:id="BUSIFPARAM_VALUE.CLK_INTF.ASSOCIATED_RESET">sclr</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_CLKEN</spirit:name>
+          <spirit:value spirit:resolve="immediate" spirit:id="BUSIFPARAM_VALUE.CLK_INTF.ASSOCIATED_CLKEN">ce</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>sclr_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sclr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:resolve="immediate" spirit:id="BUSIFPARAM_VALUE.SCLR_INTF.POLARITY">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>ce_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="clockenable" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="clockenable_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>ce</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>b_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>b</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>add_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>add</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>c_in_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>c_in</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>bypass_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>bypass</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>sset_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sset</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>sinit_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sinit</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>c_out_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>c_out</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s_intf</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="common" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_miscfiles</spirit:name>
+        <spirit:displayName>Miscellaneous</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:misc.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_miscfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>customizationCRC</spirit:name>
+            <spirit:value>2881953049</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>customizationCRCversion</spirit:name>
+            <spirit:value>1</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguageinstantiationtemplate</spirit:name>
+        <spirit:displayName>Instantiation Template</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.template</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguageinstantiationtemplate_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>customizationCRC</spirit:name>
+            <spirit:value>2881953049</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>customizationCRCversion</spirit:name>
+            <spirit:value>1</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>a</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_A_WIDTH&apos;)) - 1)">14</spirit:left>
+            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_B_WIDTH&apos;)) - 1)">14</spirit:left>
+            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_B_CONSTANT&apos;)) = 0) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_B_CONSTANT&apos;)) = 1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_BYPASS&apos;)) = 1)))">true</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) = -1) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) > 0))">true</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>add</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x1</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_ADD_MODE&apos;)) = 2)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>c_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_C_IN&apos;)) = 1)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ce</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x1</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_CE&apos;)) = 1)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>bypass</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_BYPASS&apos;)) = 1)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sclr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_SCLR&apos;)) = 1)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sset</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_SSET&apos;)) = 1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_IMPLEMENTATION&apos;)) = 0))">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sinit</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_SINIT&apos;)) = 1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_IMPLEMENTATION&apos;)) = 0))">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>c_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:presence>optional</xilinx:presence>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_C_OUT&apos;)) = 1)">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_OUT_WIDTH&apos;)) - 1)">15</spirit:left>
+            <spirit:right spirit:format="long" spirit:resolve="immediate">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_miscfiles</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>c_verbosity</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_VERBOSITY">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>c_xdevicefamily</spirit:name>
+        <spirit:value spirit:format="string" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_XDEVICEFAMILY">no_family</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_implementation</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_IMPLEMENTATION">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_a_width</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_A_WIDTH">15</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_b_width</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_B_WIDTH">15</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_out_width</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_OUT_WIDTH">16</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_ce_overrides_sclr</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CE_OVERRIDES_SCLR">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_a_type</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_A_TYPE">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_b_type</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_B_TYPE">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_latency</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_add_mode</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADD_MODE">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_b_constant</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_B_CONSTANT">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>c_b_value</spirit:name>
+        <spirit:value spirit:format="string" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_B_VALUE">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>c_ainit_val</spirit:name>
+        <spirit:value spirit:format="string" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_AINIT_VAL">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>c_sinit_val</spirit:name>
+        <spirit:value spirit:format="string" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_SINIT_VAL">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_ce_overrides_bypass</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CE_OVERRIDES_BYPASS">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_bypass_low</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_BYPASS_LOW">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_sclr_overrides_sset</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_SCLR_OVERRIDES_SSET">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_c_in</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_C_IN">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_c_out</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_C_OUT">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_borrow_low</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_BORROW_LOW">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_ce</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_CE">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_bypass</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_BYPASS">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_sclr</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_SCLR">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_sset</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_SSET">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>c_has_sinit</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_SINIT">0</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choices_0</spirit:name>
+      <spirit:enumeration>Fabric</spirit:enumeration>
+      <spirit:enumeration>DSP48</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choices_1</spirit:name>
+      <spirit:enumeration>Signed</spirit:enumeration>
+      <spirit:enumeration>Unsigned</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choices_2</spirit:name>
+      <spirit:enumeration>Signed</spirit:enumeration>
+      <spirit:enumeration>Unsigned</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choices_3</spirit:name>
+      <spirit:enumeration>Add</spirit:enumeration>
+      <spirit:enumeration>Subtract</spirit:enumeration>
+      <spirit:enumeration>Add_Subtract</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choices_4</spirit:name>
+      <spirit:enumeration>Automatic</spirit:enumeration>
+      <spirit:enumeration>Manual</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choices_5</spirit:name>
+      <spirit:enumeration>Active_High</spirit:enumeration>
+      <spirit:enumeration>Active_Low</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choices_6</spirit:name>
+      <spirit:enumeration>Active_High</spirit:enumeration>
+      <spirit:enumeration>Active_Low</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choices_7</spirit:name>
+      <spirit:enumeration>Reset_Overrides_Set</spirit:enumeration>
+      <spirit:enumeration>Set_Overrides_Reset</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choices_8</spirit:name>
+      <spirit:enumeration>CE_Overrides_Sync</spirit:enumeration>
+      <spirit:enumeration>Sync_Overrides_CE</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choices_9</spirit:name>
+      <spirit:enumeration>CE_Overrides_Bypass</spirit:enumeration>
+      <spirit:enumeration>Bypass_Overrides_CE</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_miscfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>c_addsub_v11_0_0.xco</spirit:name>
+        <spirit:userFileType>xco</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>c_addsub_v11_0_0_xmdf.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguageinstantiationtemplate_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>c_addsub_v11_0_0.veo</spirit:name>
+        <spirit:userFileType>verilogTemplate</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>The Xilinx LogiCORE Adder Subtracter can create adders, subtracters, and adders/subtracters that operate on signed or unsigned data. In fabric, the module supports inputs ranging from 1 to 256 bits wide, and outputs ranging from 1 to 258 bits wide.  I/O widths are family dependent for dsp48 implementations.</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.COMPONENT_NAME" spirit:order="1">c_addsub_v11_0_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Implementation</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.IMPLEMENTATION" spirit:choiceRef="choices_0" spirit:order="2">Fabric</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>A_Type</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.A_TYPE" spirit:choiceRef="choices_1" spirit:order="3">Signed</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>B_Type</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.B_TYPE" spirit:choiceRef="choices_2" spirit:order="4">Signed</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>A_Width</spirit:name>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.A_WIDTH" spirit:order="5" spirit:minimum="1" spirit:maximum="256">15</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>B_Width</spirit:name>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.B_WIDTH" spirit:order="6" spirit:minimum="1" spirit:maximum="256">15</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Add_Mode</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.ADD_MODE" spirit:choiceRef="choices_3" spirit:order="7">Add</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Out_Width</spirit:name>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OUT_WIDTH" spirit:order="8" spirit:minimum="1" spirit:maximum="258">16</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Latency_Configuration</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.LATENCY_CONFIGURATION" spirit:choiceRef="choices_4" spirit:order="9">Automatic</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Latency</spirit:name>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.LATENCY" spirit:order="10" spirit:minimum="0" spirit:maximum="258">2</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>B_Constant</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.B_CONSTANT" spirit:order="11">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>B_Value</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.B_VALUE" spirit:order="12">000000000000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CE</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CE" spirit:order="13">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_In</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IN" spirit:order="14">true</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_Out</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_OUT" spirit:order="15">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Borrow_Sense</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.BORROW_SENSE" spirit:choiceRef="choices_5" spirit:order="16">Active_Low</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>SCLR</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.SCLR" spirit:order="17">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>SSET</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.SSET" spirit:order="18">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>SINIT</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.SINIT" spirit:order="19">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>SINIT_Value</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.SINIT_VALUE" spirit:order="20">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Bypass</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.BYPASS" spirit:order="21">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Bypass_Sense</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.BYPASS_SENSE" spirit:choiceRef="choices_6" spirit:order="22">Active_High</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Sync_Ctrl_Priority</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.SYNC_CTRL_PRIORITY" spirit:choiceRef="choices_7" spirit:order="23">Reset_Overrides_Set</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Sync_CE_Priority</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.SYNC_CE_PRIORITY" spirit:choiceRef="choices_8" spirit:order="24">Sync_Overrides_CE</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Bypass_CE_Priority</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.BYPASS_CE_PRIORITY" spirit:choiceRef="choices_9" spirit:order="25">CE_Overrides_Bypass</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>AINIT_Value</spirit:name>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.AINIT_VALUE" spirit:order="26">0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/Math_Functions/Adders_&amp;_Subtracters</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>Adder Subtracter</xilinx:displayName>
+      <xilinx:hideInCatalogGUI>false</xilinx:hideInCatalogGUI>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:ip:c_addsub:9.0</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:ip:c_addsub:9.1</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:ip:c_addsub:10.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2015-10-28T00:41:01</xilinx:coreCreationDateTime>
+    </xilinx:coreExtensions>
+    <xilinx:coreProperties>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan3</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan3A</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan3ADSP</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan3E</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan6</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Spartan6L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">ASpartan6</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">ASpartan3</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">ASpartan3A</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">ASpartan3E</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">ASpartan3ADSP</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Virtex4</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Virtex5</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Virtex6L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Virtex6</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qspartan6l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qspartan6</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex4</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qrvirtex4</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex5</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qrvirtex5</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex6l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex6</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QVirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Kintex7L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QKintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QKintex7L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">Artix7L</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">AArtix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">QArtix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:customization>
+        <xilinx:customizer>Spirit</xilinx:customizer>
+        <xilinx:elaborator>Sim</xilinx:elaborator>
+        <xilinx:customizationTarget>c_addsub_v11.0.class</xilinx:customizationTarget>
+        <xilinx:guiType>Cpp</xilinx:guiType>
+        <xilinx:coreMixedCaseComponentName>false</xilinx:coreMixedCaseComponentName>
+        <xilinx:upgrades>
+          <xilinx:canUpgradeFrom>xilinx.com:ip:c_addsub:9.0</xilinx:canUpgradeFrom>
+          <xilinx:canUpgradeFrom>xilinx.com:ip:c_addsub:9.1</xilinx:canUpgradeFrom>
+          <xilinx:canUpgradeFrom>xilinx.com:ip:c_addsub:10.0</xilinx:canUpgradeFrom>
+        </xilinx:upgrades>
+      </xilinx:customization>
+      <xilinx:generation>
+        <xilinx:generationFlow>Spirit</xilinx:generationFlow>
+        <xilinx:deliverSimulationModel>true</xilinx:deliverSimulationModel>
+        <xilinx:disableFootprint>false</xilinx:disableFootprint>
+        <xilinx:forceStructuralVhdlModel>false</xilinx:forceStructuralVhdlModel>
+        <xilinx:forceStructuralVerilogModel>true</xilinx:forceStructuralVerilogModel>
+        <xilinx:keepCfamilyInCoreWrapperHdl>false</xilinx:keepCfamilyInCoreWrapperHdl>
+        <xilinx:keepCxdevicefamilyInCoreWrapperHdl>true</xilinx:keepCxdevicefamilyInCoreWrapperHdl>
+        <xilinx:disableTopLevelCoreOutputProducts>false</xilinx:disableTopLevelCoreOutputProducts>
+      </xilinx:generation>
+      <xilinx:display>
+        <xilinx:displayName>Adder Subtracter</xilinx:displayName>
+        <xilinx:ipType>Spirit</xilinx:ipType>
+        <xilinx:hideInGUI>false</xilinx:hideInGUI>
+        <xilinx:coreCreationDateTime>2015-10-28T00:41:01</xilinx:coreCreationDateTime>
+        <xilinx:taxonomies>
+          <xilinx:taxonomy>/Math_Functions/Adders_&amp;_Subtracters</xilinx:taxonomy>
+        </xilinx:taxonomies>
+      </xilinx:display>
+    </xilinx:coreProperties>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2013.3.0</xilinx:xilinxVersion>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

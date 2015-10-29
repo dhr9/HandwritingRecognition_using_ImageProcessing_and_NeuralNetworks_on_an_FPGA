@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<BillOfMaterials Version="1" Minor="2">
+  <IPInstance name="c_addsub_v11_0_0">
+    <FileSets>
+      <FileSet generator="apply_current_project_options_generator">
+        <File name="./apply_current_project_options_generator.xlog" type="ignore" timestamp="Tue Oct 27 19:11:01 GMT 2015" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="customization_generator">
+        <File name="./customization_generator.xlog" type="ignore" timestamp="Tue Oct 27 19:11:01 GMT 2015" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="ip_xco_generator">
+        <File name="./c_addsub_v11_0_0.xco" type="xco" timestamp="Tue Oct 27 19:11:00 GMT 2015" checksum="0x1C793808"></File>
+      </FileSet>
+      <FileSet generator="instantiation_template_generator">
+        <File name="./c_addsub_v11_0_0.veo" type="veo" timestamp="Tue Oct 27 19:11:01 GMT 2015" checksum="0xA6645C3C"></File>
+      </FileSet>
+      <FileSet generator="xmdf_generator">
+        <File name="./c_addsub_v11_0_0_xmdf.tcl" type="tclXmdf" timestamp="Tue Oct 27 19:11:01 GMT 2015" checksum="0x8E87B86A"></File>
+      </FileSet>
+    </FileSets>
+  </IPInstance>
+</BillOfMaterials>

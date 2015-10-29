@@ -1,0 +1,1430 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -o bft.twr
+-v 30 -l 30 bft_routed.ncd bft.pcf
+
+Design file:              bft_routed.ncd
+Physical constraint file: bft.pcf
+Device,package,speed:     xc7k70t,fbg484,C,-2 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report, limited to 30 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_wbClk = PERIOD TIMEGRP "wbClk" 9 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 7540 paths analyzed, 2492 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.007ns.
+--------------------------------------------------------------------------------
+Slack:                  3.993ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_24 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.651ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.321ns (0.995 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO24  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X37Y56.A5      net (fanout=1)        0.810   demux<5>[24]
+    SLICE_X37Y56.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT311
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+    SLICE_X29Y49.D1      net (fanout=1)        1.005   Mmux_GND_6_o_GND_6_o_mux_40_OUT171
+    SLICE_X29Y49.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT173
+    SLICE_X12Y59.C2      net (fanout=1)        0.973   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+    SLICE_X12Y59.CLK     Tas                  -0.023   wbOutputData_25
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT175
+                                                       wbOutputData_24
+    -------------------------------------------------  ---------------------------
+    Total                                      4.651ns (1.863ns logic, 2.788ns route)
+                                                       (40.1% logic, 59.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  3.993ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_24 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.651ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.321ns (0.995 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO24  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X37Y56.A5      net (fanout=1)        0.810   demux<5>[24]
+    SLICE_X37Y56.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT311
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+    SLICE_X29Y49.D1      net (fanout=1)        1.005   Mmux_GND_6_o_GND_6_o_mux_40_OUT171
+    SLICE_X29Y49.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT173
+    SLICE_X12Y59.C2      net (fanout=1)        0.973   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+    SLICE_X12Y59.CLK     Tas                  -0.023   wbOutputData_25
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT175
+                                                       wbOutputData_24
+    -------------------------------------------------  ---------------------------
+    Total                                      4.651ns (1.863ns logic, 2.788ns route)
+                                                       (40.1% logic, 59.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.000ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_28 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.639ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.326ns (0.993 - 1.319)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X0Y9.DOBDO28  Trcko_DOB             1.800   egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X22Y46.A1      net (fanout=1)        0.830   demux<7>[28]
+    SLICE_X22Y46.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT2
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT211
+    SLICE_X36Y59.D1      net (fanout=1)        1.014   Mmux_GND_6_o_GND_6_o_mux_40_OUT21
+    SLICE_X36Y59.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT213
+    SLICE_X12Y63.C2      net (fanout=1)        0.932   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+    SLICE_X12Y63.CLK     Tas                  -0.023   wbOutputData_29
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT215
+                                                       wbOutputData_28
+    -------------------------------------------------  ---------------------------
+    Total                                      4.639ns (1.863ns logic, 2.776ns route)
+                                                       (40.2% logic, 59.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.000ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_28 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.639ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.326ns (0.993 - 1.319)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X0Y9.DOBDO28  Trcko_DOB             1.800   egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X22Y46.A1      net (fanout=1)        0.830   demux<7>[28]
+    SLICE_X22Y46.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT2
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT211
+    SLICE_X36Y59.D1      net (fanout=1)        1.014   Mmux_GND_6_o_GND_6_o_mux_40_OUT21
+    SLICE_X36Y59.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT213
+    SLICE_X12Y63.C2      net (fanout=1)        0.932   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+    SLICE_X12Y63.CLK     Tas                  -0.023   wbOutputData_29
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT215
+                                                       wbOutputData_28
+    -------------------------------------------------  ---------------------------
+    Total                                      4.639ns (1.863ns logic, 2.776ns route)
+                                                       (40.2% logic, 59.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.094ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_24 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.741ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.130ns (0.995 - 1.125)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y13.DOBDO24 Trcko_DOB             1.800   egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X37Y56.A2      net (fanout=1)        0.900   demux<4>[24]
+    SLICE_X37Y56.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT311
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+    SLICE_X29Y49.D1      net (fanout=1)        1.005   Mmux_GND_6_o_GND_6_o_mux_40_OUT171
+    SLICE_X29Y49.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT173
+    SLICE_X12Y59.C2      net (fanout=1)        0.973   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+    SLICE_X12Y59.CLK     Tas                  -0.023   wbOutputData_25
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT175
+                                                       wbOutputData_24
+    -------------------------------------------------  ---------------------------
+    Total                                      4.741ns (1.863ns logic, 2.878ns route)
+                                                       (39.3% logic, 60.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.094ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_24 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.741ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.130ns (0.995 - 1.125)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y13.DOBDO24 Trcko_DOB             1.800   egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X37Y56.A2      net (fanout=1)        0.900   demux<4>[24]
+    SLICE_X37Y56.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT311
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+    SLICE_X29Y49.D1      net (fanout=1)        1.005   Mmux_GND_6_o_GND_6_o_mux_40_OUT171
+    SLICE_X29Y49.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT173
+    SLICE_X12Y59.C2      net (fanout=1)        0.973   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+    SLICE_X12Y59.CLK     Tas                  -0.023   wbOutputData_25
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT175
+                                                       wbOutputData_24
+    -------------------------------------------------  ---------------------------
+    Total                                      4.741ns (1.863ns logic, 2.878ns route)
+                                                       (39.3% logic, 60.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.176ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_20 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.466ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.323ns (0.996 - 1.319)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X0Y9.DOBDO20  Trcko_DOB             1.800   egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X23Y44.A2      net (fanout=1)        0.894   demux<7>[20]
+    SLICE_X23Y44.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT13
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT131
+    SLICE_X31Y49.A1      net (fanout=1)        0.733   Mmux_GND_6_o_GND_6_o_mux_40_OUT13
+    SLICE_X31Y49.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT132
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT133
+    SLICE_X13Y57.A2      net (fanout=1)        0.944   Mmux_GND_6_o_GND_6_o_mux_40_OUT132
+    SLICE_X13Y57.CLK     Tas                   0.009   wbOutputData_22
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT135
+                                                       wbOutputData_20
+    -------------------------------------------------  ---------------------------
+    Total                                      4.466ns (1.895ns logic, 2.571ns route)
+                                                       (42.4% logic, 57.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.176ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_20 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.466ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.323ns (0.996 - 1.319)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X0Y9.DOBDO20  Trcko_DOB             1.800   egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X23Y44.A2      net (fanout=1)        0.894   demux<7>[20]
+    SLICE_X23Y44.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT13
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT131
+    SLICE_X31Y49.A1      net (fanout=1)        0.733   Mmux_GND_6_o_GND_6_o_mux_40_OUT13
+    SLICE_X31Y49.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT132
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT133
+    SLICE_X13Y57.A2      net (fanout=1)        0.944   Mmux_GND_6_o_GND_6_o_mux_40_OUT132
+    SLICE_X13Y57.CLK     Tas                   0.009   wbOutputData_22
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT135
+                                                       wbOutputData_20
+    -------------------------------------------------  ---------------------------
+    Total                                      4.466ns (1.895ns logic, 2.571ns route)
+                                                       (42.4% logic, 57.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.196ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_21 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.446ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.323ns (0.996 - 1.319)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X0Y9.DOBDO21  Trcko_DOB             1.800   egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X25Y48.A2      net (fanout=1)        0.945   demux<7>[21]
+    SLICE_X25Y48.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT72
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT141
+    SLICE_X36Y58.A3      net (fanout=1)        0.826   Mmux_GND_6_o_GND_6_o_mux_40_OUT14
+    SLICE_X36Y58.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT142
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT143
+    SLICE_X13Y57.B4      net (fanout=1)        0.779   Mmux_GND_6_o_GND_6_o_mux_40_OUT142
+    SLICE_X13Y57.CLK     Tas                   0.010   wbOutputData_22
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT145
+                                                       wbOutputData_21
+    -------------------------------------------------  ---------------------------
+    Total                                      4.446ns (1.896ns logic, 2.550ns route)
+                                                       (42.6% logic, 57.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.210ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_30 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.434ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.321ns (0.990 - 1.311)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y7.DOBDO30  Trcko_DOB             1.800   egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X21Y47.A1      net (fanout=1)        0.827   demux<1>[30]
+    SLICE_X21Y47.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT24
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT241
+    SLICE_X36Y61.B5      net (fanout=1)        0.866   Mmux_GND_6_o_GND_6_o_mux_40_OUT24
+    SLICE_X36Y61.B       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT243
+    SLICE_X13Y66.A3      net (fanout=1)        0.846   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+    SLICE_X13Y66.CLK     Tas                   0.009   wbOutputData_31
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT245
+                                                       wbOutputData_30
+    -------------------------------------------------  ---------------------------
+    Total                                      4.434ns (1.895ns logic, 2.539ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.210ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_30 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.434ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.321ns (0.990 - 1.311)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y7.DOBDO30  Trcko_DOB             1.800   egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X21Y47.A1      net (fanout=1)        0.827   demux<1>[30]
+    SLICE_X21Y47.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT24
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT241
+    SLICE_X36Y61.B5      net (fanout=1)        0.866   Mmux_GND_6_o_GND_6_o_mux_40_OUT24
+    SLICE_X36Y61.B       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT243
+    SLICE_X13Y66.A3      net (fanout=1)        0.846   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+    SLICE_X13Y66.CLK     Tas                   0.009   wbOutputData_31
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT245
+                                                       wbOutputData_30
+    -------------------------------------------------  ---------------------------
+    Total                                      4.434ns (1.895ns logic, 2.539ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.211ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_20 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.434ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.320ns (0.996 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO20  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X36Y50.D2      net (fanout=1)        0.945   demux<5>[20]
+    SLICE_X36Y50.D       Tilo                  0.043   egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr[9]
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT132
+    SLICE_X31Y49.A2      net (fanout=1)        0.650   Mmux_GND_6_o_GND_6_o_mux_40_OUT131
+    SLICE_X31Y49.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT132
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT133
+    SLICE_X13Y57.A2      net (fanout=1)        0.944   Mmux_GND_6_o_GND_6_o_mux_40_OUT132
+    SLICE_X13Y57.CLK     Tas                   0.009   wbOutputData_22
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT135
+                                                       wbOutputData_20
+    -------------------------------------------------  ---------------------------
+    Total                                      4.434ns (1.895ns logic, 2.539ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.211ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_12 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.435ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.319ns (0.997 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO12  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X37Y57.A1      net (fanout=1)        1.034   demux<5>[12]
+    SLICE_X37Y57.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT41
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT42
+    SLICE_X24Y48.D6      net (fanout=1)        0.778   Mmux_GND_6_o_GND_6_o_mux_40_OUT41
+    SLICE_X24Y48.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT42
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT43
+    SLICE_X13Y50.A1      net (fanout=1)        0.728   Mmux_GND_6_o_GND_6_o_mux_40_OUT42
+    SLICE_X13Y50.CLK     Tas                   0.009   wbOutputData_15
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT45
+                                                       wbOutputData_12
+    -------------------------------------------------  ---------------------------
+    Total                                      4.435ns (1.895ns logic, 2.540ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.211ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_12 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.435ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.319ns (0.997 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO12  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X37Y57.A1      net (fanout=1)        1.034   demux<5>[12]
+    SLICE_X37Y57.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT41
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT42
+    SLICE_X24Y48.D6      net (fanout=1)        0.778   Mmux_GND_6_o_GND_6_o_mux_40_OUT41
+    SLICE_X24Y48.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT42
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT43
+    SLICE_X13Y50.A1      net (fanout=1)        0.728   Mmux_GND_6_o_GND_6_o_mux_40_OUT42
+    SLICE_X13Y50.CLK     Tas                   0.009   wbOutputData_15
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT45
+                                                       wbOutputData_12
+    -------------------------------------------------  ---------------------------
+    Total                                      4.435ns (1.895ns logic, 2.540ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.211ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_20 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.434ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.320ns (0.996 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO20  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X36Y50.D2      net (fanout=1)        0.945   demux<5>[20]
+    SLICE_X36Y50.D       Tilo                  0.043   egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr[9]
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT132
+    SLICE_X31Y49.A2      net (fanout=1)        0.650   Mmux_GND_6_o_GND_6_o_mux_40_OUT131
+    SLICE_X31Y49.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT132
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT133
+    SLICE_X13Y57.A2      net (fanout=1)        0.944   Mmux_GND_6_o_GND_6_o_mux_40_OUT132
+    SLICE_X13Y57.CLK     Tas                   0.009   wbOutputData_22
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT135
+                                                       wbOutputData_20
+    -------------------------------------------------  ---------------------------
+    Total                                      4.434ns (1.895ns logic, 2.539ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.229ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_30 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.407ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.329ns (0.990 - 1.319)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X0Y9.DOBDO30  Trcko_DOB             1.800   egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X21Y47.A2      net (fanout=1)        0.800   demux<7>[30]
+    SLICE_X21Y47.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT24
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT241
+    SLICE_X36Y61.B5      net (fanout=1)        0.866   Mmux_GND_6_o_GND_6_o_mux_40_OUT24
+    SLICE_X36Y61.B       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT243
+    SLICE_X13Y66.A3      net (fanout=1)        0.846   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+    SLICE_X13Y66.CLK     Tas                   0.009   wbOutputData_31
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT245
+                                                       wbOutputData_30
+    -------------------------------------------------  ---------------------------
+    Total                                      4.407ns (1.895ns logic, 2.512ns route)
+                                                       (43.0% logic, 57.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.229ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_30 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.407ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.329ns (0.990 - 1.319)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X0Y9.DOBDO30  Trcko_DOB             1.800   egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X21Y47.A2      net (fanout=1)        0.800   demux<7>[30]
+    SLICE_X21Y47.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT24
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT241
+    SLICE_X36Y61.B5      net (fanout=1)        0.866   Mmux_GND_6_o_GND_6_o_mux_40_OUT24
+    SLICE_X36Y61.B       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT243
+    SLICE_X13Y66.A3      net (fanout=1)        0.846   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+    SLICE_X13Y66.CLK     Tas                   0.009   wbOutputData_31
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT245
+                                                       wbOutputData_30
+    -------------------------------------------------  ---------------------------
+    Total                                      4.407ns (1.895ns logic, 2.512ns route)
+                                                       (43.0% logic, 57.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.248ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_28 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.399ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.318ns (0.993 - 1.311)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y7.DOBDO28  Trcko_DOB             1.800   egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X22Y46.A6      net (fanout=1)        0.590   demux<1>[28]
+    SLICE_X22Y46.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT2
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT211
+    SLICE_X36Y59.D1      net (fanout=1)        1.014   Mmux_GND_6_o_GND_6_o_mux_40_OUT21
+    SLICE_X36Y59.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT213
+    SLICE_X12Y63.C2      net (fanout=1)        0.932   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+    SLICE_X12Y63.CLK     Tas                  -0.023   wbOutputData_29
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT215
+                                                       wbOutputData_28
+    -------------------------------------------------  ---------------------------
+    Total                                      4.399ns (1.863ns logic, 2.536ns route)
+                                                       (42.4% logic, 57.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.248ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_28 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.399ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.318ns (0.993 - 1.311)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y7.DOBDO28  Trcko_DOB             1.800   egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X22Y46.A6      net (fanout=1)        0.590   demux<1>[28]
+    SLICE_X22Y46.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT2
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT211
+    SLICE_X36Y59.D1      net (fanout=1)        1.014   Mmux_GND_6_o_GND_6_o_mux_40_OUT21
+    SLICE_X36Y59.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT213
+    SLICE_X12Y63.C2      net (fanout=1)        0.932   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+    SLICE_X12Y63.CLK     Tas                  -0.023   wbOutputData_29
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT215
+                                                       wbOutputData_28
+    -------------------------------------------------  ---------------------------
+    Total                                      4.399ns (1.863ns logic, 2.536ns route)
+                                                       (42.4% logic, 57.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.256ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_30 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.383ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.326ns (0.990 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO30  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X23Y61.D1      net (fanout=1)        0.960   demux<5>[30]
+    SLICE_X23Y61.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT241
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+    SLICE_X36Y61.B1      net (fanout=1)        0.682   Mmux_GND_6_o_GND_6_o_mux_40_OUT241
+    SLICE_X36Y61.B       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT243
+    SLICE_X13Y66.A3      net (fanout=1)        0.846   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+    SLICE_X13Y66.CLK     Tas                   0.009   wbOutputData_31
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT245
+                                                       wbOutputData_30
+    -------------------------------------------------  ---------------------------
+    Total                                      4.383ns (1.895ns logic, 2.488ns route)
+                                                       (43.2% logic, 56.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.256ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_30 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.383ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.326ns (0.990 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO30  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X23Y61.D1      net (fanout=1)        0.960   demux<5>[30]
+    SLICE_X23Y61.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT241
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+    SLICE_X36Y61.B1      net (fanout=1)        0.682   Mmux_GND_6_o_GND_6_o_mux_40_OUT241
+    SLICE_X36Y61.B       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT243
+    SLICE_X13Y66.A3      net (fanout=1)        0.846   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+    SLICE_X13Y66.CLK     Tas                   0.009   wbOutputData_31
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT245
+                                                       wbOutputData_30
+    -------------------------------------------------  ---------------------------
+    Total                                      4.383ns (1.895ns logic, 2.488ns route)
+                                                       (43.2% logic, 56.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.283ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_28 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.359ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.323ns (0.993 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO28  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X37Y59.A1      net (fanout=1)        1.132   demux<5>[28]
+    SLICE_X37Y59.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT211
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+    SLICE_X36Y59.D2      net (fanout=1)        0.432   Mmux_GND_6_o_GND_6_o_mux_40_OUT211
+    SLICE_X36Y59.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT213
+    SLICE_X12Y63.C2      net (fanout=1)        0.932   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+    SLICE_X12Y63.CLK     Tas                  -0.023   wbOutputData_29
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT215
+                                                       wbOutputData_28
+    -------------------------------------------------  ---------------------------
+    Total                                      4.359ns (1.863ns logic, 2.496ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.283ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_28 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.359ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.323ns (0.993 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO28  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X37Y59.A1      net (fanout=1)        1.132   demux<5>[28]
+    SLICE_X37Y59.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT211
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+    SLICE_X36Y59.D2      net (fanout=1)        0.432   Mmux_GND_6_o_GND_6_o_mux_40_OUT211
+    SLICE_X36Y59.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT213
+    SLICE_X12Y63.C2      net (fanout=1)        0.932   Mmux_GND_6_o_GND_6_o_mux_40_OUT212
+    SLICE_X12Y63.CLK     Tas                  -0.023   wbOutputData_29
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT215
+                                                       wbOutputData_28
+    -------------------------------------------------  ---------------------------
+    Total                                      4.359ns (1.863ns logic, 2.496ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.348ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_10 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.489ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.128ns (0.997 - 1.125)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y13.DOBDO10 Trcko_DOB             1.800   egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X26Y49.A2      net (fanout=1)        1.495   demux<4>[10]
+    SLICE_X26Y49.A       Tilo                  0.043   rnd3_4<5>[3]
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT22
+    SLICE_X24Y49.A2      net (fanout=1)        0.432   Mmux_GND_6_o_GND_6_o_mux_40_OUT210
+    SLICE_X24Y49.A       Tilo                  0.043   rnd3_4<5>[2]
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT23
+    SLICE_X13Y52.C3      net (fanout=1)        0.667   Mmux_GND_6_o_GND_6_o_mux_40_OUT214
+    SLICE_X13Y52.CLK     Tas                   0.009   wbOutputData_11
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT25
+                                                       wbOutputData_10
+    -------------------------------------------------  ---------------------------
+    Total                                      4.489ns (1.895ns logic, 2.594ns route)
+                                                       (42.2% logic, 57.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.348ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_10 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.489ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.128ns (0.997 - 1.125)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y13.DOBDO10 Trcko_DOB             1.800   egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X26Y49.A2      net (fanout=1)        1.495   demux<4>[10]
+    SLICE_X26Y49.A       Tilo                  0.043   rnd3_4<5>[3]
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT22
+    SLICE_X24Y49.A2      net (fanout=1)        0.432   Mmux_GND_6_o_GND_6_o_mux_40_OUT210
+    SLICE_X24Y49.A       Tilo                  0.043   rnd3_4<5>[2]
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT23
+    SLICE_X13Y52.C3      net (fanout=1)        0.667   Mmux_GND_6_o_GND_6_o_mux_40_OUT214
+    SLICE_X13Y52.CLK     Tas                   0.009   wbOutputData_11
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT25
+                                                       wbOutputData_10
+    -------------------------------------------------  ---------------------------
+    Total                                      4.489ns (1.895ns logic, 2.594ns route)
+                                                       (42.2% logic, 57.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.387ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_25 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.262ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.316ns (0.995 - 1.311)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y7.DOBDO25  Trcko_DOB             1.800   egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X20Y49.A1      net (fanout=1)        0.927   demux<1>[25]
+    SLICE_X20Y49.A       Tilo                  0.043   egressLoop[6].egressFifo/buffer_fifo/infer_fifo.wr_addr[9]
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT181
+    SLICE_X22Y61.A1      net (fanout=1)        0.811   Mmux_GND_6_o_GND_6_o_mux_40_OUT18
+    SLICE_X22Y61.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT192
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT183
+    SLICE_X12Y59.D2      net (fanout=1)        0.661   Mmux_GND_6_o_GND_6_o_mux_40_OUT182
+    SLICE_X12Y59.CLK     Tas                  -0.023   wbOutputData_25
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT185
+                                                       wbOutputData_25
+    -------------------------------------------------  ---------------------------
+    Total                                      4.262ns (1.863ns logic, 2.399ns route)
+                                                       (43.7% logic, 56.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.395ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_26 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.247ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.323ns (0.993 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO26  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X36Y61.A6      net (fanout=1)        0.912   demux<5>[26]
+    SLICE_X36Y61.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT192
+    SLICE_X22Y61.B1      net (fanout=1)        0.806   Mmux_GND_6_o_GND_6_o_mux_40_OUT191
+    SLICE_X22Y61.B       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT192
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT193
+    SLICE_X12Y63.A2      net (fanout=1)        0.664   Mmux_GND_6_o_GND_6_o_mux_40_OUT192
+    SLICE_X12Y63.CLK     Tas                  -0.021   wbOutputData_29
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT195
+                                                       wbOutputData_26
+    -------------------------------------------------  ---------------------------
+    Total                                      4.247ns (1.865ns logic, 2.382ns route)
+                                                       (43.9% logic, 56.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.395ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_26 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.247ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.323ns (0.993 - 1.316)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y9.DOBDO26  Trcko_DOB             1.800   egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X36Y61.A6      net (fanout=1)        0.912   demux<5>[26]
+    SLICE_X36Y61.A       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT242
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT192
+    SLICE_X22Y61.B1      net (fanout=1)        0.806   Mmux_GND_6_o_GND_6_o_mux_40_OUT191
+    SLICE_X22Y61.B       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT192
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT193
+    SLICE_X12Y63.A2      net (fanout=1)        0.664   Mmux_GND_6_o_GND_6_o_mux_40_OUT192
+    SLICE_X12Y63.CLK     Tas                  -0.021   wbOutputData_29
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT195
+                                                       wbOutputData_26
+    -------------------------------------------------  ---------------------------
+    Total                                      4.247ns (1.865ns logic, 2.382ns route)
+                                                       (43.9% logic, 56.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.398ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_24 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.251ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.316ns (0.995 - 1.311)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y7.DOBDO24  Trcko_DOB             1.800   egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X22Y46.C1      net (fanout=1)        0.841   demux<1>[24]
+    SLICE_X22Y46.C       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT2
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT171
+    SLICE_X29Y49.D4      net (fanout=1)        0.574   Mmux_GND_6_o_GND_6_o_mux_40_OUT17
+    SLICE_X29Y49.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT173
+    SLICE_X12Y59.C2      net (fanout=1)        0.973   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+    SLICE_X12Y59.CLK     Tas                  -0.023   wbOutputData_25
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT175
+                                                       wbOutputData_24
+    -------------------------------------------------  ---------------------------
+    Total                                      4.251ns (1.863ns logic, 2.388ns route)
+                                                       (43.8% logic, 56.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.398ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram (RAM)
+  Destination:          wbOutputData_24 (FF)
+  Requirement:          9.000ns
+  Data Path Delay:      4.251ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.316ns (0.995 - 1.311)
+  Source Clock:         wbClk_BUFGP rising at 0.000ns
+  Destination Clock:    wbClk_BUFGP rising at 9.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram to wbOutputData_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X1Y7.DOBDO24  Trcko_DOB             1.800   egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+                                                       egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram
+    SLICE_X22Y46.C1      net (fanout=1)        0.841   demux<1>[24]
+    SLICE_X22Y46.C       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT2
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT171
+    SLICE_X29Y49.D4      net (fanout=1)        0.574   Mmux_GND_6_o_GND_6_o_mux_40_OUT17
+    SLICE_X29Y49.D       Tilo                  0.043   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT173
+    SLICE_X12Y59.C2      net (fanout=1)        0.973   Mmux_GND_6_o_GND_6_o_mux_40_OUT172
+    SLICE_X12Y59.CLK     Tas                  -0.023   wbOutputData_25
+                                                       Mmux_GND_6_o_GND_6_o_mux_40_OUT175
+                                                       wbOutputData_24
+    -------------------------------------------------  ---------------------------
+    Total                                      4.251ns (1.863ns logic, 2.388ns route)
+                                                       (43.8% logic, 56.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_wbClk = PERIOD TIMEGRP "wbClk" 9 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[5].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Logical resource: ingressLoop[5].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Location pin: RAMB36_X0Y23.CLKARDCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[5].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Logical resource: ingressLoop[5].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Location pin: RAMB36_X0Y23.CLKARDCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[2].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Logical resource: ingressLoop[2].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Location pin: RAMB36_X0Y10.CLKARDCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[2].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Logical resource: ingressLoop[2].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Location pin: RAMB36_X0Y10.CLKARDCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKB)
+  Physical resource: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Logical resource: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Location pin: RAMB36_X1Y9.CLKBWRCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLK_WF_NC(FMAX_BRAM_WF_NC))
+  Physical resource: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Logical resource: egressLoop[5].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Location pin: RAMB36_X1Y9.CLKBWRCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[1].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Logical resource: ingressLoop[1].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Location pin: RAMB36_X0Y16.CLKARDCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[1].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Logical resource: ingressLoop[1].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Location pin: RAMB36_X0Y16.CLKARDCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKB)
+  Physical resource: egressLoop[6].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Logical resource: egressLoop[6].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Location pin: RAMB36_X1Y11.CLKBWRCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLK_WF_NC(FMAX_BRAM_WF_NC))
+  Physical resource: egressLoop[6].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Logical resource: egressLoop[6].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Location pin: RAMB36_X1Y11.CLKBWRCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKB)
+  Physical resource: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Logical resource: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Location pin: RAMB36_X1Y7.CLKBWRCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLK_WF_NC(FMAX_BRAM_WF_NC))
+  Physical resource: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Logical resource: egressLoop[1].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Location pin: RAMB36_X1Y7.CLKBWRCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKB)
+  Physical resource: egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Logical resource: egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Location pin: RAMB36_X2Y13.CLKBWRCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLK_WF_NC(FMAX_BRAM_WF_NC))
+  Physical resource: egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Logical resource: egressLoop[4].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Location pin: RAMB36_X2Y13.CLKBWRCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKB)
+  Physical resource: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Logical resource: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Location pin: RAMB36_X0Y9.CLKBWRCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLK_WF_NC(FMAX_BRAM_WF_NC))
+  Physical resource: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Logical resource: egressLoop[7].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Location pin: RAMB36_X0Y9.CLKBWRCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKB)
+  Physical resource: egressLoop[2].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Logical resource: egressLoop[2].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Location pin: RAMB36_X2Y12.CLKBWRCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLK_WF_NC(FMAX_BRAM_WF_NC))
+  Physical resource: egressLoop[2].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Logical resource: egressLoop[2].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Location pin: RAMB36_X2Y12.CLKBWRCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[7].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Logical resource: ingressLoop[7].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Location pin: RAMB36_X0Y24.CLKARDCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[7].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Logical resource: ingressLoop[7].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Location pin: RAMB36_X0Y24.CLKARDCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKB)
+  Physical resource: egressLoop[0].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Logical resource: egressLoop[0].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Location pin: RAMB36_X1Y13.CLKBWRCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLK_WF_NC(FMAX_BRAM_WF_NC))
+  Physical resource: egressLoop[0].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Logical resource: egressLoop[0].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Location pin: RAMB36_X1Y13.CLKBWRCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKB)
+  Physical resource: egressLoop[3].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Logical resource: egressLoop[3].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKL
+  Location pin: RAMB36_X0Y12.CLKBWRCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLK_WF_NC(FMAX_BRAM_WF_NC))
+  Physical resource: egressLoop[3].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Logical resource: egressLoop[3].egressFifo/buffer_fifo/Mram_fifo_ram/CLKBWRCLKU
+  Location pin: RAMB36_X0Y12.CLKBWRCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[0].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Logical resource: ingressLoop[0].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Location pin: RAMB36_X2Y18.CLKARDCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[0].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Logical resource: ingressLoop[0].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Location pin: RAMB36_X2Y18.CLKARDCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[4].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Logical resource: ingressLoop[4].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Location pin: RAMB36_X1Y20.CLKARDCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[4].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Logical resource: ingressLoop[4].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Location pin: RAMB36_X1Y20.CLKARDCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[6].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Logical resource: ingressLoop[6].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKL
+  Location pin: RAMB36_X0Y25.CLKARDCLKL
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.161ns (period - min period limit)
+  Period: 9.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: ingressLoop[6].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Logical resource: ingressLoop[6].ingressFifo/buffer_fifo/Mram_fifo_ram/CLKARDCLKU
+  Location pin: RAMB36_X0Y25.CLKARDCLKU
+  Clock network: wbClk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock wbClk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+wbClk          |    5.007|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 7540 paths, 0 nets, and 3158 connections
+
+Design statistics:
+   Minimum period:   5.007ns{1}   (Maximum frequency: 199.720MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Oct 28 00:36:02 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 671 MB
+
+
+

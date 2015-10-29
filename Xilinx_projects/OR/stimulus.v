@@ -50,28 +50,9 @@ module stimulus;
 		#100;
         
 		// Add stimulus here
-		/*
-		//Rana's stimulus
 		#50 i1 = 1;
 		#50 i1 = 0;
 		#60 i3 = 1;
-		*/
-		//Dhr's stimulus
-		#50 i3 = 1;
-		#50 i3 = 0;
-		i2 = 1;
-		#50 i3 = 1;
-		#50 i3 = 0;
-		i2 = 0;
-		i1 = 1;
-		#50 i3 = 1;
-		#50 i3 = 0;
-		i2 = 1;
-		#50 i3 = 1;
-		#50 i3 = 0;
-		i2 = 0;
-		i1 = 0;
-		
 		
 	end
    

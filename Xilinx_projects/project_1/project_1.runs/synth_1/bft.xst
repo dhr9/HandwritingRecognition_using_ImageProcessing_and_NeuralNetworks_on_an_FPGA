@@ -1,0 +1,9 @@
+set -loop_iteration_limit 1000
+run
+-ifn bft.prj
+-top bft
+-p xc7k70tfbg484-2
+-ofn bft.ngc
+-opt_mode speed
+-opt_level 1
+-netlist_hierarchy rebuilt

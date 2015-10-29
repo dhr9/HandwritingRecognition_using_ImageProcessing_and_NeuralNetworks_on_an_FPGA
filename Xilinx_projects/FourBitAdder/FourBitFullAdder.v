@@ -28,28 +28,28 @@ wire carry0;
 wire carry1;
 wire carry2;
  
-FullAdder1Bit FA1	(
+FullAdder1Bit s1	(
 		.A(A[0]), 
 		.B(B[0]), 
 		.Cin(Cin), 
 		.Sum(Sum), 
 		.Cout(carry0),
 	);
-FullAdder1Bit FA2	(
+FullAdder1Bit s2	(
 		.A(A[1]), 
 		.B(B[1]), 
 		.Cin(Cin), 
 		.Sum(Sum), 
 		.Cout(carry1),
 	);
-FullAdder1Bit FA3	(
+FullAdder1Bit s3	(
 		.A(A[2]), 
 		.B(B[2]), 
 		.Cin(Cin), 
 		.Sum(Sum), 
 		.Cout(carry2),
 	);
-FullAdder1Bit FA4	(
+FullAdder1Bit s4	(
 		.A(A[3]), 
 		.B(B[3]), 
 		.Cin(Cin), 

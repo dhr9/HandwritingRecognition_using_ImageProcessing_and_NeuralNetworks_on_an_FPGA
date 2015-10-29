@@ -39,9 +39,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1445769387" xil_pn:in_ck="-4205554398101396614" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1445769387">
+    <transform xil_pn:end_ts="1446026639" xil_pn:in_ck="-4205554398101396614" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1446026639">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../FullAdder1Bit/FullAdder1Bit.v"/>
       <outfile xil_pn:name="FourBitFullAdder.v"/>
       <outfile xil_pn:name="Testbench.v"/>
