@@ -1,0 +1,9 @@
+set -loop_iteration_limit 1000
+run
+-ifn FullAdder1Bit.prj
+-top FullAdder1Bit
+-p xc3s100ecp132-4
+-ofn FullAdder1Bit.ngc
+-opt_mode speed
+-opt_level 1
+-bufg 24

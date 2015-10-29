@@ -32,29 +32,42 @@ module Testbench;
 	// Outputs
 	wire [3:0] Sum;
 	wire Cout;
-
+	 
+	//vars 
+	integer i;
+	
 	// Instantiate the Unit Under Test (UUT)
 	FourBitFullAdder uut (
 		.A(A), 
 		.B(B), 
 		.Cin(Cin), 
 		.Sum(Sum), 
-		.Cout(Cout)
+		.Cout(Cout),
 	);
 
 	initial begin
 		// Initialize Inputs
-		A = 4'b0000;B = 4'b0000;Cin = 1'b0;
-		#40 A = 4'b0010;B = 4'b1111;Cin = 1'b0;
-		#40 A = 4'b0100;B = 4'b1110;Cin = 1'b1;
-		#40 A = 4'b1000;B = 4'b1010;Cin = 1'b1;
-		repeat(10)
-		input_generate(A,B,Cin);
-		#45 $finish;
+//		A = 4'b0000;B = 4'b0000;Cin = 1'b0;
+//		#40 A = 4'b0010;B = 4'b1111;Cin = 1'b0;
+//		#80 A = 4'b0100;B = 4'b1110;Cin = 1'b1;
+//		#120 A = 4'b1000;B = 4'b1010;Cin = 1'b1;
+//		repeat(10)
+//		input_generate(A,B,Cin);
+//		#150 $finish;
+		A = 0;
+		B = 0;
+	
 	end
-		
-	task input_generate;
-	output[3:0]A,B
+	
+	initial
+			$monitor( "A(%b) + B(%b)  = carry sum(%b %b)",A ,B ,Cin ,Sum );
+	
+	always @ (A or B)
+		begin
+		for (i = 0 ; i < 16*16 ; i = i +i )
+			 #1 {A,B}= i;
+		#10 $stop;
+		end
 		// Wait 100 ns for global reset to finish
         
 		// Add stimulus here

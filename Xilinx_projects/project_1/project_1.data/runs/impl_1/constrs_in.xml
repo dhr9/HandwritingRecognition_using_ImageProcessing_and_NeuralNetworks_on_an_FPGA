@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DARoots Version="1" Minor="26">
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_2">
+    <File Path="$PSRCDIR/constrs_2/imports/Sources/bft_full.ucf">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Xilinx/14.7/ISE_DS/PlanAhead/examples/PlanAhead_Tutorial/Sources/bft_full.ucf"/>
+        <Attr Name="ImportTime" Val="1333052636"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_2/imports/Sources/bft_full.ucf"/>
+      <Option Name="ConstrsType" Val="UCF"/>
+    </Config>
+  </FileSet>
+</DARoots>

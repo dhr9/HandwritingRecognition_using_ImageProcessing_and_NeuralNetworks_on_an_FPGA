@@ -35,8 +35,8 @@ module TestBench;
 
 	// Instantiate the Unit Under Test (UUT)
 	FullAdder1Bit uut (
-		.A(A), 
-		.B(B), 
+		.A(A),
+		.B(B),
 		.Cin(Cin), 
 		.Sum(Sum), 
 		.Cout(Cout)

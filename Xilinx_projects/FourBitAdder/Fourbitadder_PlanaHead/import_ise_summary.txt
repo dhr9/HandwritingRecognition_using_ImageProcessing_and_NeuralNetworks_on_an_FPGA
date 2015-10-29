@@ -1,0 +1,371 @@
+*******************************************************************************
+*
+*                      IMPORT XISE SUMMARY REPORT
+*
+*                       (import_ise_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ON THE DATA THAT
+*  WAS PARSED FROM THE ISE PROJECT AND IMPORTED INTO THE CURRENT PROJECT.
+*
+*
+* The report is divided into following three sections:-
+*
+* Section (1) - ISE PROJECT INFORMATION
+*
+*  This section provides the details of the ISE project that was imported
+*
+* Section (2) - EXCEPTIONS
+*
+*  This section summarizes the ISE project data that was either not imported or
+*  not mapped into the current project
+*
+* Section (3) - MAPPED DATA
+*
+*  This section summarizes the PlanAhead project information that was imported
+*  from the ISE project data
+*
+*******************************************************************************
+
+Section (1) - ISE PROJECT INFORMATION
+-------------------------------------
+
+The following items describes the information about the ISE project that was imported:-
+
+Project Name    = FourBitAdder
+Project File    = D:/Xilinx_projects/FourBitAdder/FourBitAdder.xise
+Project Version = 14.7
+Device Family   = Spartan3E
+Part Name       = xc3s100e-4-cp132
+
+
+Section (2) - EXCEPTIONS
+------------------------
+
+The following sub-sections describes the list of items that were NOT mapped from the
+XISE file contents into the current project:-
+
+Section (2.1) - Missing Sources
+-------------------------------
+None
+
+
+Section (2.2) - Unknown Sources
+-------------------------------
+None
+
+
+Section (2.3) - IP Import Issues
+--------------------------------
+None
+
+
+Section (2.4) - Unknown Properties
+----------------------------------
+
+The following ISE properties were not mapped into the current project:-
+
+
+<ISE Property Name>                                   <ISE Property Value>
+"Allow SelectMAP Pins to Persist"                     'false'
+"Analysis Effort Level"                               'Standard'
+"Asynchronous To Synchronous"                         'false'
+"Automatically Insert glbl Module in the Netlist"     'true'
+"Automatically Run Generate Target PROM/ACE File"     'false'
+"BRAM Utilization Ratio"                              '100'
+"Bring Out Global Set/Reset Net as a Port"            'false'
+"Bring Out Global Tristate Net as a Port"             'false'
+"Bus Delimiter"                                       '<>'
+"CLB Pack Factor Percentage"                          '100'
+"Case"                                                'Maintain'
+"Case Implementation Style"                           'None'
+"Change Device Speed To"                              '-4'
+"Change Device Speed To Post Trace"                   '-4'
+"Configuration Clk (Configuration Pins)"              'Pull Up'
+"Configuration Pin Done"                              'Pull Up'
+"Configuration Pin M0"                                'Pull Up'
+"Configuration Pin M1"                                'Pull Up'
+"Configuration Pin M2"                                'Pull Up'
+"Configuration Pin Program"                           'Pull Up'
+"Configuration Rate"                                  'Default (1)'
+"Correlate Output to Input Design"                    'false'
+"Create Binary Configuration File"                    'false'
+"Create IEEE 1532 Configuration File"                 'false'
+"Create ReadBack Data Files"                          'false'
+"Cross Clock Analysis"                                'false'
+"DCI Update Mode"                                     'As Required'
+"DSP Utilization Ratio"                               '100'
+"Decoder Extraction"                                  'true'
+"Device Speed Grade/Select ABS Minimum"               '-4'
+"Disable Detailed Package Model Insertion"            'false'
+"Do Not Escape Signal and Instance Names in Netlist"  'false'
+"Done (Output Events)"                                'Default (4)'
+"Drive Done Pin High"                                 'false'
+"Enable BitStream Compression"                        'false'
+"Enable Cyclic Redundancy Checking (CRC)"             'true'
+"Enable Debugging of Serial Mode BitStream"           'false'
+"Enable Internal Done Pipe"                           'true'
+"Enable Message Filtering"                            'false'
+"Enable Outputs (Output Events)"                      'Default (5)'
+"Evaluation Development Board"                        'None Specified'
+"Extra Effort"                                        'None'
+"FPGA Start-Up Clock"                                 'CCLK'
+"FSM Style"                                           'LUT'
+"Flatten Output Netlist"                              'false'
+"Functional Model Target Language ArchWiz"            'Verilog'
+"Functional Model Target Language Coregen"            'Verilog'
+"Functional Model Target Language Schematic"          'Verilog'
+"Generate Asynchronous Delay Report"                  'false'
+"Generate Clock Region Report"                        'false'
+"Generate Constraints Interaction Report"             'false'
+"Generate Constraints Interaction Report Post Trace"  'false'
+"Generate Datasheet Section"                          'true'
+"Generate Detailed MAP Report"                        'false'
+"Generate Multiple Hierarchical Netlist Files"        'false'
+"Generate Post-Place & Route Power Report"            'false'
+"Generate Post-Place & Route Simulation Model"        'false'
+"Generate RTL Schematic"                              'Yes'
+"Generate Testbench File"                             'false'
+"Generate Timegroups Section"                         'false'
+"Generate Timegroups Section Post Trace"              'false'
+"Global Optimization Goal"                            'AllClockNets'
+"Global Set/Reset Port Name"                          'GSR_PORT'
+"Global Tristate Port Name"                           'GTS_PORT'
+"Hierarchy Separator"                                 '/'
+"Ignore User Timing Constraints Map"                  'false'
+"Include 'uselib Directive in Verilog File"           'false'
+"Include SIMPRIM Models in Verilog File"              'false'
+"Include UNISIM Models in Verilog File"               'false'
+"Include sdf_annotate task in Verilog File"           'true'
+"Insert Buffers to Prevent Pulse Swallowing"          'true'
+"JTAG Pin TCK"                                        'Pull Up'
+"JTAG Pin TDI"                                        'Pull Up'
+"JTAG Pin TDO"                                        'Pull Up'
+"JTAG Pin TMS"                                        'Pull Up'
+"Keep Hierarchy"                                      'No'
+"Last Unlock Status"                                  'false'
+"Library for Verilog Sources"                         ''
+"Logical Shifter Extraction"                          'true'
+"Map Effort Level"                                    'High'
+"Max Fanout"                                          '100000'
+"Maximum Number of Lines in Report"                   '1000'
+"Maximum Signal Name Length"                          '20'
+"Move First Flip-Flop Stage"                          'true'
+"Move Last Flip-Flop Stage"                           'true'
+"Multiplier Style"                                    'Auto'
+"Mux Extraction"                                      'Yes'
+"Mux Style"                                           'Auto'
+"Netlist Translation Type"                            'Timestamp'
+"Number of Paths in Error/Verbose Report"             '3'
+"Optimize Instantiated Primitives"                    'false'
+"Other XPWR Command Line Options"                     ''
+"Output Extended Identifiers"                         'false'
+"Output File Name"                                    'FourBitFullAdder'
+"Perform Advanced Analysis"                           'false'
+"Perform Advanced Analysis Post Trace"                'false'
+"Place And Route Mode"                                'Normal Place and Route'
+"Port to be used"                                     'Auto - default'
+"Post Map Simulation Model Name"                      'FourBitFullAdder_map.v'
+"Post Place & Route Simulation Model Name"            'FourBitFullAdder_timesim.v'
+"Post Synthesis Simulation Model Name"                'FourBitFullAdder_synthesis.v'
+"Post Translate Simulation Model Name"                'FourBitFullAdder_translate.v'
+"Priority Encoder Extraction"                         'Yes'
+"Produce Verbose Report"                              'false'
+"RAM Extraction"                                      'true'
+"ROM Extraction"                                      'true'
+"ROM Style"                                           'Auto'
+"Read Cores"                                          'true'
+"Regenerate Core"                                     'Under Current Project Setting'
+"Register Duplication Xst"                            'true'
+"Release Write Enable (Output Events)"                'Default (6)'
+"Rename Design Instance in Testbench File to"         'UUT'
+"Rename Top Level Architecture To"                    'Structure'
+"Rename Top Level Entity to"                          ''
+"Report Paths by Endpoint"                            '3'
+"Report Paths by Endpoint Post Trace"                 '3'
+"Report Type"                                         'Verbose Report'
+"Report Type Post Trace"                              'Verbose Report'
+"Reset DCM if SHUTDOWN & AGHIGH performed"            'false'
+"Reset On Configuration Pulse Width"                  '100'
+"Revision Select"                                     '00'
+"Revision Select Tristate"                            'Disable'
+"Safe Implementation"                                 'No'
+"Security"                                            'Enable Readback and Reconfiguration'
+"Shift Register Extraction"                           'true'
+"Show All Models"                                     'false'
+"Slice Packing"                                       'true'
+"Slice Utilization Ratio"                             '100'
+"Top-Level Module Name in Output Netlist"             ''
+"Tristate On Configuration Pulse Width"               '0'
+"Unused IOB Pins"                                     'Pull Down'
+"Use Clock Enable"                                    'Yes'
+"Use Smart Guide"                                     'false'
+"Use Synchronous Reset"                               'Yes'
+"Use Synchronous Set"                                 'Yes'
+"Use Synthesis Constraints File"                      'true'
+"UserID Code (8 Digit Hexadecimal)"                   '0xFFFFFFFF'
+"VHDL Source Analysis Standard"                       'VHDL-93'
+"Verilog 2001 Xst"                                    'true'
+"Wait for DLL Lock (Output Events)"                   'Default (NoWait)'
+"Write Timing Constraints"                            'false'
+"XOR Collapsing"                                      'true'
+
+
+Section (3) - MAPPED DATA
+-------------------------
+
+The following sub-sections describes the list of items that were imported from the
+ISE properties and sources and mapped into the current project:-
+
+Section (3.1) - Target Device
+-----------------------------
+
+Default Part = xc3s100ecp132-4
+Family       = spartan3e
+Package      = cp132
+Speed Grade  = -4
+
+
+Section (3.2) - Filesets
+------------------------
+
+<sources_1>
+FILESET_TYPE   = DesignSrcs
+TOP            = FourBitFullAdder
+DESIGN_MODE    = RTL
+VERILOG_DIR    = 
+VERILOG_DEFINE = 
+VHDL_GENERICS  = 
+
+File(s):-
+NAME      = FourBitFullAdder.v
+FILE PATH = D:/Xilinx_projects/FourBitAdder/FourBitFullAdder.v
+FILE_TYPE = Verilog
+LIBRARY   = work
+
+NAME      = FullAdder1Bit.v
+FILE PATH = D:/Xilinx_projects/FullAdder1Bit/FullAdder1Bit.v
+FILE_TYPE = Verilog
+LIBRARY   = work
+
+
+<constrs_1>
+FILESET_TYPE   = Constrs
+
+Note: During the import operation, any constraint file(s) that are found in the ISE project will be added to the current PlanAhead project.
+      However, please note that none of these files will be automatically marked as a "Target Constraint File". To set a constraint file
+      as target, select the file in the GUI "Sources" window, right-click on this file and then select "Set Target UCF". Alternatively,
+      the target constraint file can be set using the "set_property target_constrs_file <filename> <fileset>" Tcl command.
+
+File(s):-
+None
+
+<sim_1>
+FILESET_TYPE   = SimulationSrcs
+
+File(s):-
+NAME      = Testbench.v
+FILE PATH = D:/Xilinx_projects/FourBitAdder/Testbench.v
+FILE_TYPE = Verilog
+LIBRARY   = work
+
+
+Section (3.3) - Design Runs(s)
+------------------------------
+
+<synth_1>
+FLOW      = XST 14
+PART      = xc3s100ecp132-4
+SRCSET    = sources_1
+CONSTRSET = constrs_1
+STRATEGY  = PlanAhead Defaults
+
+Options:-
+                                                                                               
+<ISE Property Name>                <Step>  <Option>                      <ISE Property Value>  <PlanAhead Mapped Value>
+"Automatic BRAM Packing"           xst     -auto_bram_packing            'false'               'no'
+"Equivalent Register Removal XST"  xst     -equivalent_register_removal  'true'                'yes'
+"FSM Encoding Algorithm"           xst     -fsm_encoding                 'Auto'                'auto'
+"Netlist Hierarchy"                xst     -netlist_hierarchy            'As Optimized'        'as_optimized'
+"Number of Clock Buffers"          xst     -bufg                         '24'                  '24'
+"Optimization Effort"              xst     -opt_level                    'Normal'              '1'
+"Optimization Goal"                xst     -opt_mode                     'Speed'               'speed'
+"Pack I/O Registers into IOBs"     xst     -iob                          'Auto'                'auto'
+"RAM Style"                        xst     -ram_style                    'Auto'                'auto'
+"Register Balancing"               xst     -register_balancing           'No'                  'no'
+"Resource Sharing"                 xst     -resource_sharing             'true'                'yes'
+
+
+<impl_1>
+FLOW      = ISE 14
+PART      = xc3s100ecp132-4
+SRCSET    = sources_1
+CONSTRSET = constrs_1
+STRATEGY  = ISE Defaults
+
+Options:-
+                                                                                                                
+<ISE Property Name>                                     <Step>    <Option>                <ISE Property Value>  <PlanAhead Mapped Value>
+"Allow Unexpanded Blocks"                               ngdbuild  -u                      'false'               'false'
+"Allow Unmatched LOC Constraints"                       ngdbuild  -aul                    'false'               'false'
+"Allow Unmatched Timing Group Constraints"              ngdbuild  -aut                    'false'               'false'
+"Create I/O Pads from Ports"                            ngdbuild  -a                      'false'               'false'
+"Use LOC Constraints"                                   ngdbuild  -r                      'true'                'false'
+                                                                                                                
+<ISE Property Name>                                     <Step>    <Option>                <ISE Property Value>  <PlanAhead Mapped Value>
+"Allow Logic Optimization Across Hierarchy"             map       -ignore_keep_hierarchy  'false'               'false'
+"Combinatorial Logic Optimization"                      map       -logic_opt              'false'               'off'
+"Enable Multi-Threading"                                map       -mt                     'Off'                 'off'
+"Optimization Strategy (Cover Mode)"                    map       -cm                     'Area'                'area'
+"Pack I/O Registers/Latches into IOBs"                  map       -pr                     'Off'                 '<none>'
+"Perform Timing-Driven Packing and Placement"           map       -timing                 'false'               'false'
+"Power Reduction Map"                                   map       -power                  'false'               'off'
+"Register Duplication"                                  map       -register_duplication   'Off'                 'false'
+"Starting Placer Cost Table (1-100) Map"                map       -t                      '1'                   '1'
+"Timing Mode Map"                                       map       -ntd                    'Non Timing Driven'   '-ntd'
+"Trim Unconnected Signals"                              map       -u                      'true'                'false'
+"Use RLOC Constraints"                                  map       -ir                     'Yes'                 'off'
+                                                                                                                
+<ISE Property Name>                                     <Step>    <Option>                <ISE Property Value>  <PlanAhead Mapped Value>
+"Extra Effort (Highest PAR level only)"                 par       -xe                     'None'                '<none>'
+"Ignore User Timing Constraints Par"                    par       -x                      'false'               'false'
+"Place & Route Effort Level (Overall)"                  par       -ol                     'High'                'high'
+"Placer Effort Level (Overrides Overall Level)"         par       -pl                     'None'                '<none>'
+"Power Reduction Par"                                   par       -power                  'false'               'off'
+"Router Effort Level (Overrides Overall Level)"         par       -rl                     'None'                '<none>'
+"Starting Placer Cost Table (1-100) Par"                par       -t                      '1'                   '1'
+                                                                                                                
+<ISE Property Name>                                     <Step>    <Option>                <ISE Property Value>  <PlanAhead Mapped Value>
+"Generate Datasheet Section Post Trace"                 trce      -nodatasheet            'true'                'true'
+"Number of Paths in Error/Verbose Report Post Trace"    trce      -v                      '3'                   '3'
+"Report Fastest Path(s) in Each Constraint"             trce      -fastpaths              'true'                'true'
+"Report Fastest Path(s) in Each Constraint Post Trace"  trce      -fastpaths              'true'                'true'
+                                                                                                                
+<ISE Property Name>                                     <Step>    <Option>                <ISE Property Value>  <PlanAhead Mapped Value>
+"Create ASCII Configuration File"                       bitgen    -b                      'false'               'false'
+"Create Bit File"                                       bitgen    -j                      'true'                'false'
+"Create Logic Allocation File"                          bitgen    -l                      'false'               'false'
+"Create Mask File"                                      bitgen    -m                      'false'               'false'
+"Run Design Rules Checker (DRC)"                        bitgen    -d                      'true'                'false'
+
+
+<sim_1>
+TOP  = Testbench
+SOURCE_SET  = sources_1
+
+Options:-
+                                                                                                            
+<ISE Property Name>                                   <Step>  <Option>                <ISE Property Value>  <PlanAhead Mapped Value>
+"Generate Architecture Only (No Entity Declaration)"  netgen  ng.gen_arch_only        'false'               'false'
+"Other NETGEN Command Line Options"                   netgen  ng.more_netgen_options  ''                    ''
+"Rename Top Level Module To"                          netgen  ng.rename_top           ''                    ''
+"Retain Hierarchy"                                    netgen  ng.retain_hierarchy     'true'                'true'
+"Simulation Model Target"                             netgen  ng.output_hdl_format    'Verilog'             'Verilog'
+                                                                                                            
+<ISE Property Name>                                   <Step>  <Option>                <ISE Property Value>  <PlanAhead Mapped Value>
+"Compile for HDL Debugging"                           isim    fuse.nodebug            'true'                'true'
+"Delay Values To Be Read from SDF"                    isim    isim.sdf_delay          'Setup Time'          'sdfmax'
+"ISim UUT Instance Name"                              isim    unit_under_test         'UUT'                 'UUT'
+"Incremental Compilation"                             isim    fuse.incremental        'true'                'true'
+"Load glbl"                                           isim    fuse.load_glbl          'true'                'true'
+"Simulation Run Time ISim"                            isim    runtime                 '1000 ns'             '1000 ns'
+"Value Range Check"                                   isim    fuse.range_check        'false'               'false'

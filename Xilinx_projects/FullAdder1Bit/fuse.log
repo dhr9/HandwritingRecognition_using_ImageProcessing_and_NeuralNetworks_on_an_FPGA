@@ -14,5 +14,5 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 3 Verilog Units
 Built simulation executable D:/Xilinx_projects/FullAdder1Bit/TestBench_isim_beh.exe
-Fuse Memory Usage: 26852 KB
-Fuse CPU Usage: 405 ms
+Fuse Memory Usage: 26060 KB
+Fuse CPU Usage: 499 ms

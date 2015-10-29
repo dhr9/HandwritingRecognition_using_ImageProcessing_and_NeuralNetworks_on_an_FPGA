@@ -8,10 +8,10 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Xilinx_projects/FourBitAdder/Testbench.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Xilinx_projects/FourBitAdder/FourBitFullAdder.v&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Xilinx_projects/FourBitAdder/Testbench.v</arg>&quot; Line <arg fmt="%d" index="2">63</arg>. <arg fmt="%s" index="3">Syntax error near &quot;endmodule&quot;.</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Xilinx_projects/FullAdder1Bit/FullAdder1Bit.v&quot; into library work</arg>
 </msg>
 
 </messages>

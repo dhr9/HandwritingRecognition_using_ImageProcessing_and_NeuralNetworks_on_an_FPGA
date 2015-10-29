@@ -1,0 +1,1548 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'bft'
+
+Design Information
+------------------
+Command Line   : map -intstyle pa -w bft.ngd 
+Target Device  : xc7k70t
+Target Package : fbg484
+Target Speed   : -2
+Mapper Version : kintex7 -- $Revision: 1.55 $
+Mapped Date    : Wed Oct 28 00:34:03 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,342 out of  82,000    1%
+    Number used as Flip Flops:               1,342
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      1,917 out of  41,000    4%
+    Number used as logic:                    1,839 out of  41,000    4%
+      Number using O6 output only:           1,579
+      Number using O5 output only:               0
+      Number using O5 and O6:                  260
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  13,400    0%
+    Number used exclusively as route-thrus:     78
+      Number with same-slice register load:     78
+      Number with same-slice carry load:         0
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   934 out of  10,250    9%
+  Number of LUT Flip Flop pairs used:        2,308
+    Number with an unused Flip Flop:         1,282 out of   2,308   55%
+    Number with an unused LUT:                 391 out of   2,308   16%
+    Number of fully used LUT-FF pairs:         635 out of   2,308   27%
+    Number of unique control sets:              36
+    Number of slice register sites lost
+      to control set restrictions:              50 out of  82,000    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        71 out of     285   24%
+    Number of LOCed IOBs:                       71 out of      71  100%
+    IOB Flip Flops:                              1
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                 16 out of     135   11%
+    Number using RAMB36E1 only:                 16
+    Number using FIFO36E1 only:                  0
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     270    0%
+  Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
+    Number used as BUFGs:                        2
+    Number used as BUFGCTRLs:                    0
+  Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
+  Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0 out of     100    0%
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        1 out of     300    1%
+    Number used as OLOGICE2s:                    1
+    Number used as OLOGICE3s:                    0
+    Number used as OSERDESE2s:                   0
+  Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
+  Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      24    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of      96    0%
+  Number of BUFRs:                               0 out of      24    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DNA_PORTs:                           0 out of       1    0%
+  Number of DSP48E1s:                           96 out of     240   40%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE2_CHANNELs:                      0 out of       8    0%
+  Number of GTXE2_COMMONs:                       0 out of       2    0%
+  Number of IBUFDS_GTE2s:                        0 out of       4    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       6    0%
+  Number of IN_FIFOs:                            0 out of      24    0%
+  Number of MMCME2_ADVs:                         0 out of       6    0%
+  Number of OUT_FIFOs:                           0 out of      24    0%
+  Number of PCIE_2_1s:                           0 out of       1    0%
+  Number of PHASER_REFs:                         0 out of       6    0%
+  Number of PHY_CONTROLs:                        0 out of       6    0%
+  Number of PLLE2_ADVs:                          0 out of       6    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of XADCs:                               0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.53
+
+Peak Memory Usage:  931 MB
+Total REAL time to MAP completion:  1 mins 7 secs 
+Total CPU time to MAP completion:   52 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network
+   egressLoop[4].egressFifo/buffer_fifo/infer_fifo.almost_full_reg has no load.
+INFO:LIT:395 - The above info message is repeated 31 more times for the
+   following (max. 5 shown):
+   egressLoop[4].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg,
+   ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg,
+   ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg,
+   egressLoop[3].egressFifo/buffer_fifo/infer_fifo.almost_full_reg,
+   egressLoop[3].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg
+   To see the details of these info messages, please use the -detail switch.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.970 Volts. (default - Range: 0.970 to
+   1.030 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 200 block(s) removed
+ 114 block(s) optimized away
+ 218 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal
+"egressLoop[4].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[4].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF) removed.
+  The signal "egressLoop[4].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[4].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[4].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF) removed.
+  The signal "egressLoop[4].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[4].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[4].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o1" (ROM) removed.
+The signal
+"egressLoop[4].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[4].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o1" (ROM) removed.
+The signal
+"egressLoop[4].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[4].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+" (ROM) removed.
+The signal
+"egressLoop[4].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[4].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[4].egressFifo/buffer_fifo/N38" is sourceless and has been
+removed.
+The signal
+"egressLoop[4].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[4].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+" (ROM) removed.
+The signal
+"egressLoop[4].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[4].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[4].egressFifo/buffer_fifo/N40" is sourceless and has been
+removed.
+The signal "egressLoop[4].egressFifo/buffer_fifo/VCC_2" is sourceless and has
+been removed.
+The signal
+"ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF)
+removed.
+  The signal "ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF)
+removed.
+  The signal "ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[6].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o1" (ROM) removed.
+The signal
+"ingressLoop[6].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o1" (ROM) removed.
+The signal
+"ingressLoop[6].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[6].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o4" (ROM) removed.
+The signal
+"ingressLoop[6].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" is sourceless and has been removed.
+The signal
+"ingressLoop[6].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" is sourceless and has been removed.
+The signal
+"ingressLoop[6].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[6].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5_SW0" (ROM) removed.
+  The signal "ingressLoop[6].ingressFifo/buffer_fifo/N18" is sourceless and has
+been removed.
+   Sourceless block
+"ingressLoop[6].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5" (ROM) removed.
+The signal
+"ingressLoop[6].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" is sourceless and has been removed.
+The signal "ingressLoop[6].ingressFifo/buffer_fifo/VCC_3" is sourceless and has
+been removed.
+The signal
+"egressLoop[3].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[3].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF) removed.
+  The signal "egressLoop[3].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[3].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[3].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF) removed.
+  The signal "egressLoop[3].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[3].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[3].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o1" (ROM) removed.
+The signal
+"egressLoop[3].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[3].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o1" (ROM) removed.
+The signal
+"egressLoop[3].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[3].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+" (ROM) removed.
+The signal
+"egressLoop[3].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[3].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[3].egressFifo/buffer_fifo/N34" is sourceless and has been
+removed.
+The signal
+"egressLoop[3].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[3].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+" (ROM) removed.
+The signal
+"egressLoop[3].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[3].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[3].egressFifo/buffer_fifo/N36" is sourceless and has been
+removed.
+The signal "egressLoop[3].egressFifo/buffer_fifo/VCC_4" is sourceless and has
+been removed.
+The signal
+"ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF)
+removed.
+  The signal "ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF)
+removed.
+  The signal "ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[3].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o1" (ROM) removed.
+The signal
+"ingressLoop[3].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o1" (ROM) removed.
+The signal
+"ingressLoop[3].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[3].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o4" (ROM) removed.
+The signal
+"ingressLoop[3].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" is sourceless and has been removed.
+The signal
+"ingressLoop[3].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" is sourceless and has been removed.
+The signal
+"ingressLoop[3].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[3].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5_SW0" (ROM) removed.
+  The signal "ingressLoop[3].ingressFifo/buffer_fifo/N12" is sourceless and has
+been removed.
+   Sourceless block
+"ingressLoop[3].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5" (ROM) removed.
+The signal
+"ingressLoop[3].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" is sourceless and has been removed.
+The signal "ingressLoop[3].ingressFifo/buffer_fifo/VCC_5" is sourceless and has
+been removed.
+The signal
+"egressLoop[2].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[2].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF) removed.
+  The signal "egressLoop[2].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[2].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[2].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF) removed.
+  The signal "egressLoop[2].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[2].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[2].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o1" (ROM) removed.
+The signal
+"egressLoop[2].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[2].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o1" (ROM) removed.
+The signal
+"egressLoop[2].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[2].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+" (ROM) removed.
+The signal
+"egressLoop[2].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[2].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[2].egressFifo/buffer_fifo/N30" is sourceless and has been
+removed.
+The signal
+"egressLoop[2].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[2].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+" (ROM) removed.
+The signal
+"egressLoop[2].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[2].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[2].egressFifo/buffer_fifo/N32" is sourceless and has been
+removed.
+The signal "egressLoop[2].egressFifo/buffer_fifo/VCC_6" is sourceless and has
+been removed.
+The signal
+"ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF)
+removed.
+  The signal "ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF)
+removed.
+  The signal "ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[0].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o1" (ROM) removed.
+The signal
+"ingressLoop[0].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o1" (ROM) removed.
+The signal
+"ingressLoop[0].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[0].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o4" (ROM) removed.
+The signal
+"ingressLoop[0].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" is sourceless and has been removed.
+The signal
+"ingressLoop[0].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" is sourceless and has been removed.
+The signal
+"ingressLoop[0].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[0].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5_SW0" (ROM) removed.
+  The signal "ingressLoop[0].ingressFifo/buffer_fifo/N6" is sourceless and has
+been removed.
+   Sourceless block
+"ingressLoop[0].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5" (ROM) removed.
+The signal
+"ingressLoop[0].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" is sourceless and has been removed.
+The signal "ingressLoop[0].ingressFifo/buffer_fifo/VCC_7" is sourceless and has
+been removed.
+The signal
+"ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF)
+removed.
+  The signal "ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF)
+removed.
+  The signal "ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[7].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o1" (ROM) removed.
+The signal
+"ingressLoop[7].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o1" (ROM) removed.
+The signal
+"ingressLoop[7].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[7].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o4" (ROM) removed.
+The signal
+"ingressLoop[7].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" is sourceless and has been removed.
+The signal
+"ingressLoop[7].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" is sourceless and has been removed.
+The signal
+"ingressLoop[7].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[7].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5_SW0" (ROM) removed.
+  The signal "ingressLoop[7].ingressFifo/buffer_fifo/N20" is sourceless and has
+been removed.
+   Sourceless block
+"ingressLoop[7].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5" (ROM) removed.
+The signal
+"ingressLoop[7].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" is sourceless and has been removed.
+The signal "ingressLoop[7].ingressFifo/buffer_fifo/VCC_8" is sourceless and has
+been removed.
+The signal
+"egressLoop[1].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[1].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF) removed.
+  The signal "egressLoop[1].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[1].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[1].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF) removed.
+  The signal "egressLoop[1].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[1].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[1].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o1" (ROM) removed.
+The signal
+"egressLoop[1].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[1].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o1" (ROM) removed.
+The signal
+"egressLoop[1].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[1].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+" (ROM) removed.
+The signal
+"egressLoop[1].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[1].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[1].egressFifo/buffer_fifo/N26" is sourceless and has been
+removed.
+The signal
+"egressLoop[1].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[1].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+" (ROM) removed.
+The signal
+"egressLoop[1].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[1].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[1].egressFifo/buffer_fifo/N28" is sourceless and has been
+removed.
+The signal "egressLoop[1].egressFifo/buffer_fifo/VCC_9" is sourceless and has
+been removed.
+The signal
+"ingressLoop[4].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[4].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF)
+removed.
+  The signal "ingressLoop[4].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[4].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[4].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF)
+removed.
+  The signal "ingressLoop[4].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[4].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[4].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o1" (ROM) removed.
+The signal
+"ingressLoop[4].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[4].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o1" (ROM) removed.
+The signal
+"ingressLoop[4].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[4].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o4" (ROM) removed.
+The signal
+"ingressLoop[4].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" is sourceless and has been removed.
+The signal
+"ingressLoop[4].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" is sourceless and has been removed.
+The signal
+"ingressLoop[4].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[4].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5_SW0" (ROM) removed.
+  The signal "ingressLoop[4].ingressFifo/buffer_fifo/N14" is sourceless and has
+been removed.
+   Sourceless block
+"ingressLoop[4].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5" (ROM) removed.
+The signal
+"ingressLoop[4].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" is sourceless and has been removed.
+The signal "ingressLoop[4].ingressFifo/buffer_fifo/VCC_10" is sourceless and has
+been removed.
+The signal
+"egressLoop[0].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[0].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF) removed.
+  The signal "egressLoop[0].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[0].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[0].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF) removed.
+  The signal "egressLoop[0].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[0].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[0].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o1" (ROM) removed.
+The signal
+"egressLoop[0].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[0].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o1" (ROM) removed.
+The signal
+"egressLoop[0].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[0].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+" (ROM) removed.
+The signal
+"egressLoop[0].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[0].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[0].egressFifo/buffer_fifo/N22" is sourceless and has been
+removed.
+The signal
+"egressLoop[0].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[0].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+" (ROM) removed.
+The signal
+"egressLoop[0].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[0].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[0].egressFifo/buffer_fifo/N24" is sourceless and has been
+removed.
+The signal "egressLoop[0].egressFifo/buffer_fifo/VCC_11" is sourceless and has
+been removed.
+The signal
+"egressLoop[7].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[7].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF) removed.
+  The signal "egressLoop[7].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[7].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[7].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF) removed.
+  The signal "egressLoop[7].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[7].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[7].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o1" (ROM) removed.
+The signal
+"egressLoop[7].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[7].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o1" (ROM) removed.
+The signal
+"egressLoop[7].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[7].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+" (ROM) removed.
+The signal
+"egressLoop[7].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[7].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[7].egressFifo/buffer_fifo/N50" is sourceless and has been
+removed.
+The signal
+"egressLoop[7].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[7].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+" (ROM) removed.
+The signal
+"egressLoop[7].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[7].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[7].egressFifo/buffer_fifo/N52" is sourceless and has been
+removed.
+The signal "egressLoop[7].egressFifo/buffer_fifo/VCC_12" is sourceless and has
+been removed.
+The signal
+"ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF)
+removed.
+  The signal "ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF)
+removed.
+  The signal "ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[1].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o1" (ROM) removed.
+The signal
+"ingressLoop[1].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o1" (ROM) removed.
+The signal
+"ingressLoop[1].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[1].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o4" (ROM) removed.
+The signal
+"ingressLoop[1].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" is sourceless and has been removed.
+The signal
+"ingressLoop[1].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" is sourceless and has been removed.
+The signal
+"ingressLoop[1].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[1].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5_SW0" (ROM) removed.
+  The signal "ingressLoop[1].ingressFifo/buffer_fifo/N8" is sourceless and has
+been removed.
+   Sourceless block
+"ingressLoop[1].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5" (ROM) removed.
+The signal
+"ingressLoop[1].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" is sourceless and has been removed.
+The signal "ingressLoop[1].ingressFifo/buffer_fifo/VCC_13" is sourceless and has
+been removed.
+The signal
+"egressLoop[6].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[6].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF) removed.
+  The signal "egressLoop[6].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[6].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[6].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF) removed.
+  The signal "egressLoop[6].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[6].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[6].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o1" (ROM) removed.
+The signal
+"egressLoop[6].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[6].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o1" (ROM) removed.
+The signal
+"egressLoop[6].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[6].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+" (ROM) removed.
+The signal
+"egressLoop[6].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[6].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[6].egressFifo/buffer_fifo/N46" is sourceless and has been
+removed.
+The signal
+"egressLoop[6].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[6].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+" (ROM) removed.
+The signal
+"egressLoop[6].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[6].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[6].egressFifo/buffer_fifo/N48" is sourceless and has been
+removed.
+The signal "egressLoop[6].egressFifo/buffer_fifo/VCC_14" is sourceless and has
+been removed.
+The signal
+"ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF)
+removed.
+  The signal "ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF)
+removed.
+  The signal "ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[5].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o1" (ROM) removed.
+The signal
+"ingressLoop[5].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o1" (ROM) removed.
+The signal
+"ingressLoop[5].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[5].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o4" (ROM) removed.
+The signal
+"ingressLoop[5].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" is sourceless and has been removed.
+The signal
+"ingressLoop[5].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" is sourceless and has been removed.
+The signal
+"ingressLoop[5].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[5].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5_SW0" (ROM) removed.
+  The signal "ingressLoop[5].ingressFifo/buffer_fifo/N16" is sourceless and has
+been removed.
+   Sourceless block
+"ingressLoop[5].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5" (ROM) removed.
+The signal
+"ingressLoop[5].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" is sourceless and has been removed.
+The signal "ingressLoop[5].ingressFifo/buffer_fifo/VCC_15" is sourceless and has
+been removed.
+The signal
+"egressLoop[5].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[5].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF) removed.
+  The signal "egressLoop[5].egressFifo/buffer_fifo/infer_fifo.almost_full_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[5].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[5].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF) removed.
+  The signal "egressLoop[5].egressFifo/buffer_fifo/infer_fifo.almost_empty_reg" is
+sourceless and has been removed.
+The signal
+"egressLoop[5].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[5].egressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_add
+r[9]_OR_16_o1" (ROM) removed.
+The signal
+"egressLoop[5].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o"
+is sourceless and has been removed.
+ Sourceless block
+"egressLoop[5].egressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_ad
+dr[9]_OR_13_o1" (ROM) removed.
+The signal
+"egressLoop[5].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[5].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+" (ROM) removed.
+The signal
+"egressLoop[5].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[5].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[5].egressFifo/buffer_fifo/N42" is sourceless and has been
+removed.
+The signal
+"egressLoop[5].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[5].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+" (ROM) removed.
+The signal
+"egressLoop[5].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" is sourceless and has been removed.
+ Sourceless block
+"egressLoop[5].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o5
+_SW0" (ROM) removed.
+  The signal "egressLoop[5].egressFifo/buffer_fifo/N44" is sourceless and has been
+removed.
+The signal "egressLoop[5].egressFifo/buffer_fifo/VCC_16" is sourceless and has
+been removed.
+The signal
+"ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg" (FF)
+removed.
+  The signal "ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.almost_full_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg" (FF)
+removed.
+  The signal "ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.almost_empty_reg"
+is sourceless and has been removed.
+The signal
+"ingressLoop[2].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.full_reg_infer_fifo.next_wr_a
+ddr[9]_OR_16_o1" (ROM) removed.
+The signal
+"ingressLoop[2].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.empty_reg_infer_fifo.next_rd_
+addr[9]_OR_13_o1" (ROM) removed.
+The signal
+"ingressLoop[2].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[2].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o4" (ROM) removed.
+The signal
+"ingressLoop[2].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" is sourceless and has been removed.
+The signal
+"ingressLoop[2].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" is sourceless and has been removed.
+The signal
+"ingressLoop[2].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" is sourceless and has been removed.
+ Sourceless block
+"ingressLoop[2].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5_SW0" (ROM) removed.
+  The signal "ingressLoop[2].ingressFifo/buffer_fifo/N10" is sourceless and has
+been removed.
+   Sourceless block
+"ingressLoop[2].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o5" (ROM) removed.
+The signal
+"ingressLoop[2].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" is sourceless and has been removed.
+The signal "ingressLoop[2].ingressFifo/buffer_fifo/VCC_17" is sourceless and has
+been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "GND_1" is unused and has been removed.
+The signal "VCC_1" is unused and has been removed.
+The signal "loadIngressFifo[0]" is unused and has been removed.
+ Unused block "Mmux_loadIngressFifo11" (ROM) removed.
+The signal "loadIngressFifo[1]" is unused and has been removed.
+ Unused block "Mmux_loadIngressFifo21" (ROM) removed.
+The signal "loadIngressFifo[2]" is unused and has been removed.
+ Unused block "Mmux_loadIngressFifo31" (ROM) removed.
+The signal "loadIngressFifo[3]" is unused and has been removed.
+ Unused block "Mmux_loadIngressFifo41" (ROM) removed.
+The signal "loadIngressFifo[4]" is unused and has been removed.
+ Unused block "Mmux_loadIngressFifo51" (ROM) removed.
+The signal "loadIngressFifo[5]" is unused and has been removed.
+ Unused block "Mmux_loadIngressFifo61" (ROM) removed.
+The signal "loadIngressFifo[6]" is unused and has been removed.
+ Unused block "Mmux_loadIngressFifo71" (ROM) removed.
+The signal "loadIngressFifo[7]" is unused and has been removed.
+ Unused block "Mmux_loadIngressFifo81" (ROM) removed.
+Unused block
+"egressLoop[0].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" (ROM) removed.
+Unused block
+"egressLoop[0].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" (ROM) removed.
+Unused block
+"egressLoop[0].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" (ROM) removed.
+Unused block
+"egressLoop[0].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" (ROM) removed.
+Unused block
+"egressLoop[1].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" (ROM) removed.
+Unused block
+"egressLoop[1].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" (ROM) removed.
+Unused block
+"egressLoop[1].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" (ROM) removed.
+Unused block
+"egressLoop[1].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" (ROM) removed.
+Unused block
+"egressLoop[2].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" (ROM) removed.
+Unused block
+"egressLoop[2].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" (ROM) removed.
+Unused block
+"egressLoop[2].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" (ROM) removed.
+Unused block
+"egressLoop[2].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" (ROM) removed.
+Unused block
+"egressLoop[3].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" (ROM) removed.
+Unused block
+"egressLoop[3].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" (ROM) removed.
+Unused block
+"egressLoop[3].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" (ROM) removed.
+Unused block
+"egressLoop[3].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" (ROM) removed.
+Unused block
+"egressLoop[4].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" (ROM) removed.
+Unused block
+"egressLoop[4].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" (ROM) removed.
+Unused block
+"egressLoop[4].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" (ROM) removed.
+Unused block
+"egressLoop[4].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" (ROM) removed.
+Unused block
+"egressLoop[5].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" (ROM) removed.
+Unused block
+"egressLoop[5].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" (ROM) removed.
+Unused block
+"egressLoop[5].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" (ROM) removed.
+Unused block
+"egressLoop[5].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" (ROM) removed.
+Unused block
+"egressLoop[6].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" (ROM) removed.
+Unused block
+"egressLoop[6].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" (ROM) removed.
+Unused block
+"egressLoop[6].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" (ROM) removed.
+Unused block
+"egressLoop[6].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" (ROM) removed.
+Unused block
+"egressLoop[7].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o1
+" (ROM) removed.
+Unused block
+"egressLoop[7].egressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_o2
+" (ROM) removed.
+Unused block
+"egressLoop[7].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o1
+" (ROM) removed.
+Unused block
+"egressLoop[7].egressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_o2
+" (ROM) removed.
+Unused block
+"ingressLoop[0].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[0].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[0].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[0].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[0].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" (ROM) removed.
+Unused block
+"ingressLoop[1].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[1].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[1].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[1].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[1].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" (ROM) removed.
+Unused block
+"ingressLoop[2].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[2].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[2].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[2].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[2].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" (ROM) removed.
+Unused block
+"ingressLoop[3].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[3].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[3].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[3].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[3].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" (ROM) removed.
+Unused block
+"ingressLoop[4].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[4].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[4].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[4].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[4].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" (ROM) removed.
+Unused block
+"ingressLoop[5].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[5].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[5].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[5].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[5].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" (ROM) removed.
+Unused block
+"ingressLoop[6].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[6].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[6].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[6].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[6].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" (ROM) removed.
+Unused block
+"ingressLoop[7].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[7].ingressFifo/buffer_fifo/rd_en_infer_fifo.two_rd_addr[9]_AND_264_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[7].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o1" (ROM) removed.
+Unused block
+"ingressLoop[7].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o2" (ROM) removed.
+Unused block
+"ingressLoop[7].ingressFifo/buffer_fifo/wr_en_infer_fifo.two_wr_addr[9]_AND_267_
+o3" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		GND
+VCC 		VCC
+GND 		arnd1/transformLoop[0].ct/XST_GND
+VCC 		arnd1/transformLoop[0].ct/XST_VCC
+GND 		arnd1/transformLoop[1].ct/XST_GND
+VCC 		arnd1/transformLoop[1].ct/XST_VCC
+GND 		arnd1/transformLoop[2].ct/XST_GND
+VCC 		arnd1/transformLoop[2].ct/XST_VCC
+GND 		arnd1/transformLoop[3].ct/XST_GND
+VCC 		arnd1/transformLoop[3].ct/XST_VCC
+GND 		arnd1/transformLoop[4].ct/XST_GND
+VCC 		arnd1/transformLoop[4].ct/XST_VCC
+GND 		arnd1/transformLoop[5].ct/XST_GND
+VCC 		arnd1/transformLoop[5].ct/XST_VCC
+GND 		arnd1/transformLoop[6].ct/XST_GND
+VCC 		arnd1/transformLoop[6].ct/XST_VCC
+GND 		arnd1/transformLoop[7].ct/XST_GND
+VCC 		arnd1/transformLoop[7].ct/XST_VCC
+GND 		arnd2/ct0/XST_GND
+VCC 		arnd2/ct0/XST_VCC
+GND 		arnd2/ct1/XST_GND
+VCC 		arnd2/ct1/XST_VCC
+GND 		arnd2/ct2/XST_GND
+VCC 		arnd2/ct2/XST_VCC
+GND 		arnd2/ct3/XST_GND
+VCC 		arnd2/ct3/XST_VCC
+GND 		arnd2/ct4/XST_GND
+VCC 		arnd2/ct4/XST_VCC
+GND 		arnd2/ct5/XST_GND
+VCC 		arnd2/ct5/XST_VCC
+GND 		arnd2/ct6/XST_GND
+VCC 		arnd2/ct6/XST_VCC
+GND 		arnd2/ct7/XST_GND
+VCC 		arnd2/ct7/XST_VCC
+GND 		arnd3/transformLoop[0].ct0/XST_GND
+VCC 		arnd3/transformLoop[0].ct0/XST_VCC
+GND 		arnd3/transformLoop[0].ct1/XST_GND
+VCC 		arnd3/transformLoop[0].ct1/XST_VCC
+GND 		arnd3/transformLoop[1].ct0/XST_GND
+VCC 		arnd3/transformLoop[1].ct0/XST_VCC
+GND 		arnd3/transformLoop[1].ct1/XST_GND
+VCC 		arnd3/transformLoop[1].ct1/XST_VCC
+GND 		arnd3/transformLoop[2].ct0/XST_GND
+VCC 		arnd3/transformLoop[2].ct0/XST_VCC
+GND 		arnd3/transformLoop[2].ct1/XST_GND
+VCC 		arnd3/transformLoop[2].ct1/XST_VCC
+GND 		arnd3/transformLoop[3].ct0/XST_GND
+VCC 		arnd3/transformLoop[3].ct0/XST_VCC
+GND 		arnd3/transformLoop[3].ct1/XST_GND
+VCC 		arnd3/transformLoop[3].ct1/XST_VCC
+GND 		arnd4/transformLoop[0].ct/XST_GND
+VCC 		arnd4/transformLoop[0].ct/XST_VCC
+GND 		arnd4/transformLoop[1].ct/XST_GND
+VCC 		arnd4/transformLoop[1].ct/XST_VCC
+GND 		arnd4/transformLoop[2].ct/XST_GND
+VCC 		arnd4/transformLoop[2].ct/XST_VCC
+GND 		arnd4/transformLoop[3].ct/XST_GND
+VCC 		arnd4/transformLoop[3].ct/XST_VCC
+GND 		arnd4/transformLoop[4].ct/XST_GND
+VCC 		arnd4/transformLoop[4].ct/XST_VCC
+GND 		arnd4/transformLoop[5].ct/XST_GND
+VCC 		arnd4/transformLoop[5].ct/XST_VCC
+GND 		arnd4/transformLoop[6].ct/XST_GND
+VCC 		arnd4/transformLoop[6].ct/XST_VCC
+GND 		arnd4/transformLoop[7].ct/XST_GND
+VCC 		arnd4/transformLoop[7].ct/XST_VCC
+VCC 		egressLoop[0].egressFifo/buffer_fifo/VCC
+GND 		egressLoop[0].egressFifo/buffer_fifo/XST_GND
+VCC 		egressLoop[0].egressFifo/buffer_fifo/XST_VCC
+VCC 		egressLoop[1].egressFifo/buffer_fifo/VCC
+GND 		egressLoop[1].egressFifo/buffer_fifo/XST_GND
+VCC 		egressLoop[1].egressFifo/buffer_fifo/XST_VCC
+VCC 		egressLoop[2].egressFifo/buffer_fifo/VCC
+GND 		egressLoop[2].egressFifo/buffer_fifo/XST_GND
+VCC 		egressLoop[2].egressFifo/buffer_fifo/XST_VCC
+VCC 		egressLoop[3].egressFifo/buffer_fifo/VCC
+GND 		egressLoop[3].egressFifo/buffer_fifo/XST_GND
+VCC 		egressLoop[3].egressFifo/buffer_fifo/XST_VCC
+VCC 		egressLoop[4].egressFifo/buffer_fifo/VCC
+GND 		egressLoop[4].egressFifo/buffer_fifo/XST_GND
+VCC 		egressLoop[4].egressFifo/buffer_fifo/XST_VCC
+VCC 		egressLoop[5].egressFifo/buffer_fifo/VCC
+GND 		egressLoop[5].egressFifo/buffer_fifo/XST_GND
+VCC 		egressLoop[5].egressFifo/buffer_fifo/XST_VCC
+VCC 		egressLoop[6].egressFifo/buffer_fifo/VCC
+GND 		egressLoop[6].egressFifo/buffer_fifo/XST_GND
+VCC 		egressLoop[6].egressFifo/buffer_fifo/XST_VCC
+VCC 		egressLoop[7].egressFifo/buffer_fifo/VCC
+GND 		egressLoop[7].egressFifo/buffer_fifo/XST_GND
+VCC 		egressLoop[7].egressFifo/buffer_fifo/XST_VCC
+VCC 		ingressLoop[0].ingressFifo/buffer_fifo/VCC
+GND 		ingressLoop[0].ingressFifo/buffer_fifo/XST_GND
+VCC 		ingressLoop[0].ingressFifo/buffer_fifo/XST_VCC
+VCC 		ingressLoop[1].ingressFifo/buffer_fifo/VCC
+GND 		ingressLoop[1].ingressFifo/buffer_fifo/XST_GND
+VCC 		ingressLoop[1].ingressFifo/buffer_fifo/XST_VCC
+VCC 		ingressLoop[2].ingressFifo/buffer_fifo/VCC
+GND 		ingressLoop[2].ingressFifo/buffer_fifo/XST_GND
+VCC 		ingressLoop[2].ingressFifo/buffer_fifo/XST_VCC
+VCC 		ingressLoop[3].ingressFifo/buffer_fifo/VCC
+GND 		ingressLoop[3].ingressFifo/buffer_fifo/XST_GND
+VCC 		ingressLoop[3].ingressFifo/buffer_fifo/XST_VCC
+VCC 		ingressLoop[4].ingressFifo/buffer_fifo/VCC
+GND 		ingressLoop[4].ingressFifo/buffer_fifo/XST_GND
+VCC 		ingressLoop[4].ingressFifo/buffer_fifo/XST_VCC
+VCC 		ingressLoop[5].ingressFifo/buffer_fifo/VCC
+GND 		ingressLoop[5].ingressFifo/buffer_fifo/XST_GND
+VCC 		ingressLoop[5].ingressFifo/buffer_fifo/XST_VCC
+VCC 		ingressLoop[6].ingressFifo/buffer_fifo/VCC
+GND 		ingressLoop[6].ingressFifo/buffer_fifo/XST_GND
+VCC 		ingressLoop[6].ingressFifo/buffer_fifo/XST_VCC
+VCC 		ingressLoop[7].ingressFifo/buffer_fifo/VCC
+GND 		ingressLoop[7].ingressFifo/buffer_fifo/XST_GND
+VCC 		ingressLoop[7].ingressFifo/buffer_fifo/XST_VCC
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| bftClk                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| error                              | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
+| reset                              | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbClk                              | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbDataForInput                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbDataForOutput                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbInputData[0]                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[1]                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[2]                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[3]                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[4]                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[5]                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[6]                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[7]                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[8]                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[9]                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[10]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[11]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[12]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[13]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[14]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[15]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[16]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[17]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[18]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[19]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[20]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[21]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[22]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[23]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[24]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[25]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[26]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[27]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[28]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[29]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[30]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbInputData[31]                    | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| wbOutputData[0]                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[1]                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[2]                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[3]                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[4]                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[5]                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[6]                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[7]                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[8]                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[9]                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[10]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[11]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[12]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[13]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[14]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[15]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[16]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[17]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[18]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[19]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[20]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[21]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[22]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[23]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[24]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[25]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[26]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[27]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[28]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[29]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[30]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbOutputData[31]                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| wbWriteOut                         | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
