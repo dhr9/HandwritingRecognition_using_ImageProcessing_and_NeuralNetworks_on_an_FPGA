@@ -1,6 +1,5 @@
 ISim log file
-Running: D:\Xilinx_projects\OR\stimulus2_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Xilinx_projects/OR/stimulus2_isim_beh.wdb 
-INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+Running: D:\GitHub\Handwriting_recognition_using_neural_nets_on_FPGA\Xilinx_projects\OR\stimulus_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR/stimulus_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -12,20 +11,21 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Output=0, i1=0, i2=0, i3=0
+output=0, i1=0, i2=0, i3=0
 
-Output=1, i1=0, i2=0, i3=1
+output=1, i1=0, i2=0, i3=1
 
-Output=1, i1=0, i2=1, i3=0
+output=1, i1=0, i2=1, i3=0
 
-Output=0, i1=0, i2=1, i3=1
+output=1, i1=0, i2=1, i3=1
 
-Output=1, i1=1, i2=0, i3=0
+output=1, i1=1, i2=0, i3=0
 
-Output=0, i1=1, i2=0, i3=1
+output=1, i1=1, i2=0, i3=1
 
-Output=0, i1=1, i2=1, i3=0
+output=1, i1=1, i2=1, i3=0
 
-Output=1, i1=1, i2=1, i3=1
+output=1, i1=1, i2=1, i3=1
 
-Stopped at time : 90 ns :  in File "D:/Xilinx_projects/OR/stimulus2.v" Line 58 
+output=0, i1=0, i2=0, i3=0
+

@@ -31,6 +31,8 @@ module stimulus;
 
 	// Outputs
 	wire gateOutput;
+	
+	integer i;
 
 	// Instantiate the Unit Under Test (UUT)
 	ThreeInputOrGate uut (
@@ -49,11 +51,33 @@ module stimulus;
 		// Wait 100 ns for global reset to finish
 		#100;
         
-		// Add stimulus here
+			// Add stimulus here
+		/*
+		//Rana's stimulus
 		#50 i1 = 1;
 		#50 i1 = 0;
 		#60 i3 = 1;
-		
+		*/
+		//Dhr's stimulus
+/*		#50 i3 = 1;
+		#50 i3 = 0;
+		i2 = 1;
+		#50 i3 = 1;
+		#50 i3 = 0;
+		i2 = 0;
+		i1 = 1;
+		#50 i3 = 1;
+		#50 i3 = 0;
+		i2 = 1; 
+		#50 i3 = 1;
+		#50 i3 = 0;
+		i2 = 0;
+		i1 = 0;*/
+		for (i = 0 ; i < 8 ; i = i + 1)
+		begin
+			#50 {i1,i2,i3}= i;
+		end	
+		#50 {i1,i2,i3}= 0;
 	end
    
 	initial begin
