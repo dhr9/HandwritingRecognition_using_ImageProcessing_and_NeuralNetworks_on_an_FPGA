@@ -1,0 +1,13 @@
+START:Strategy:4:ParHighEffort2
+REMOTE_PID:7656
+RUNNING:7656:4356:ParHighEffort2:map:Multistages.ngd: -cm area -t 2 -p xc3s100e-cp132-4 -o Multistages_map.ncd  D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun4:bslMultistages.pcf
+STATUS:ParHighEffort2:map:Score:None:lut:7 (1%):slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:10.33 secs 
+STATUS:ParHighEffort2:map:Score:None:lut:7 (1%):slice_reg:None:slice:4 (1%):bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:10.33 secs 
+DONE:map:0
+RUNNING:7656:2724:ParHighEffort2:par:Multistages_map.ncd: -ol high -t 2 -w Multistages.ncd  D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun4:bslMultistages.pcf
+DONE:par:0
+RUNNING:7656:7988:ParHighEffort2:trce:D:\GitHub\Handwriting_recognition_using_neural_nets_on_FPGA\Xilinx_projects\Multistages\smartxplorer_results\run4\Multistages.ncd:D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun4:bslMultistages.pcf -xml D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun4:bslMultistages.twx -v 3 -s 4 -n 3 -fastpaths   -ucf Multistages.ucf -o D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun4:bslMultistages.twr
+DONE:trce:0
+RUNNING:7656:6704:ParHighEffort2:xpwr:D:\GitHub\Handwriting_recognition_using_neural_nets_on_FPGA\Xilinx_projects\Multistages\smartxplorer_results\run4\Multistages.ncd:D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun4:bslMultistages.pcf  -l 10  -o D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun4:bslMultistages.pwr
+STATUS:ParHighEffort2:xpwr:Score:None:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:33.66:wnsInfo:None:Time:35.47 secs 
+DONE:xpwr:0

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-10-29T20:54:29</DateModified>
+  <DateModified>2015-10-30T13:44:15</DateModified>
   <ModuleName>ThreeInputOrGate</ModuleName>
-  <SummaryTimeStamp>2015-10-24T23:33:15</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-10-30T11:11:08</SummaryTimeStamp>
   <SavedFilePath>D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR/iseconfig/ThreeInputOrGate.xreport</SavedFilePath>
   <ImplementationReportsDirectory>D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/OR\</ImplementationReportsDirectory>
   <DateInitialized>2015-10-24T23:21:34</DateInitialized>

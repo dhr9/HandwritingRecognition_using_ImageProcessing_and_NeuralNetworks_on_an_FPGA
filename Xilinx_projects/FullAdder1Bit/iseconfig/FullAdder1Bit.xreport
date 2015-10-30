@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-10-29T18:22:16</DateModified>
+  <DateModified>2015-10-30T15:50:00</DateModified>
   <ModuleName>FullAdder1Bit</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/Xilinx_projects/FullAdder1Bit/iseconfig/FullAdder1Bit.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Xilinx_projects/FullAdder1Bit\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FullAdder1Bit/iseconfig/FullAdder1Bit.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FullAdder1Bit\</ImplementationReportsDirectory>
   <DateInitialized>2015-10-25T11:40:21</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

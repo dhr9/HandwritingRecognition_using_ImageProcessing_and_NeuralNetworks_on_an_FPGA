@@ -1,0 +1,26 @@
+START:Strategy:2:MapPhysSynthesis
+REMOTE_PID:2680
+RUNNING:2680:7888:MapPhysSynthesis:map:Multistages.ngd: -timing -ol high -xe n -register_duplication on -logic_opt on  -p xc3s100e-cp132-4 -o Multistages_map.ncd  D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun2:bslMultistages.pcf
+STATUS:MapPhysSynthesis:map:Score:None:lut:7 (1%):slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:10.30 secs 
+STATUS:MapPhysSynthesis:map:Score:None:lut:7 (1%):slice_reg:None:slice:5 (1%):bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:10.30 secs 
+DONE:map:0
+RUNNING:2680:1808:MapPhysSynthesis:par:Multistages_map.ncd: -ol high  -w Multistages.ncd  D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun2:bslMultistages.pcf
+DONE:par:0
+RUNNING:2680:1976:MapPhysSynthesis:trce:D:\GitHub\Handwriting_recognition_using_neural_nets_on_FPGA\Xilinx_projects\Multistages\smartxplorer_results\run2\Multistages.ncd:D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun2:bslMultistages.pcf -xml D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun2:bslMultistages.twx -v 3 -s 4 -n 3 -fastpaths   -ucf Multistages.ucf -o D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun2:bslMultistages.twr
+DONE:trce:0
+RUNNING:2680:6960:MapPhysSynthesis:xpwr:D:\GitHub\Handwriting_recognition_using_neural_nets_on_FPGA\Xilinx_projects\Multistages\smartxplorer_results\run2\Multistages.ncd:D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun2:bslMultistages.pcf  -l 10  -o D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun2:bslMultistages.pwr
+STATUS:MapPhysSynthesis:xpwr:Score:None:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:33.66:wnsInfo:None:Time:35.56 secs 
+DONE:xpwr:0
+START:Strategy:9:MapTimingExtraEffortCT3
+REMOTE_PID:1696
+RUNNING:1696:7128:MapTimingExtraEffortCT3:map:Multistages.ngd:-timing -ol high -xe n -t 3 -p xc3s100e-cp132-4 -o Multistages_map.ncd  D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun9:bslMultistages.pcf
+STATUS:MapTimingExtraEffortCT3:map:Score:None:lut:7 (1%):slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:5.08 secs 
+STATUS:MapTimingExtraEffortCT3:map:Score:None:lut:7 (1%):slice_reg:None:slice:5 (1%):bram:None:dsp48:None:mult18x18:None:Power:None:wnsInfo:None:Time:5.08 secs 
+DONE:map:0
+RUNNING:1696:1496:MapTimingExtraEffortCT3:par:Multistages_map.ncd:-ol high -t 3 -w Multistages.ncd  D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun9:bslMultistages.pcf
+DONE:par:0
+RUNNING:1696:7560:MapTimingExtraEffortCT3:trce:D:\GitHub\Handwriting_recognition_using_neural_nets_on_FPGA\Xilinx_projects\Multistages\smartxplorer_results\run9\Multistages.ncd:D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun9:bslMultistages.pcf -xml D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun9:bslMultistages.twx -v 3 -s 4 -n 3 -fastpaths   -ucf Multistages.ucf -o D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun9:bslMultistages.twr
+DONE:trce:0
+RUNNING:1696:5796:MapTimingExtraEffortCT3:xpwr:D:\GitHub\Handwriting_recognition_using_neural_nets_on_FPGA\Xilinx_projects\Multistages\smartxplorer_results\run9\Multistages.ncd:D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun9:bslMultistages.pcf  -l 10  -o D:cl:bslGitHub:bslHandwriting_recognition_using_neural_nets_on_FPGA:bslXilinx_projects:bslMultistages:bslsmartxplorer_results:bslrun9:bslMultistages.pwr
+STATUS:MapTimingExtraEffortCT3:xpwr:Score:None:lut:None:slice_reg:None:slice:None:bram:None:dsp48:None:mult18x18:None:Power:33.66:wnsInfo:None:Time:20.23 secs 
+DONE:xpwr:0

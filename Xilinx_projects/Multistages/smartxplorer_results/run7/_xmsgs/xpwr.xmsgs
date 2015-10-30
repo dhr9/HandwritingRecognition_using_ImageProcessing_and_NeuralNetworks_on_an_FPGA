@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Power" num="1693" delta="new" >
+                      --------------------------------------------------------------
+                      The power estimate will be calculated using PRODUCTION data.
+                      --------------------------------------------------------------
+
+</msg>
+
+<msg type="warning" file="PowerEstimator" num="270" delta="new" >Power estimate is considered inaccurate. To see details, generate an advanced report with the &quot;-v&quot; switch.
+</msg>
+
+</messages>
+

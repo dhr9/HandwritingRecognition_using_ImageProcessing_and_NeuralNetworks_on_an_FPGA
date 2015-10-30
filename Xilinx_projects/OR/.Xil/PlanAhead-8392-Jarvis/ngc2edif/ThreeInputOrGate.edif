@@ -1,0 +1,175 @@
+(edif ThreeInputOrGate
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2015 10 30 13 45 18)
+      (program "Xilinx ngc2edif" (version "P.20131013"))
+      (author "Xilinx. Inc ")
+      (comment "This EDIF netlist is to be used within supported synthesis tools")
+      (comment "for determining resource/timing estimates of the design component")
+      (comment "represented by this netlist.")
+      (comment "Command line: -mdp2sp -w -secure ThreeInputOrGate.ngc ThreeInputOrGate.edif ")))
+  (external UNISIMS
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell LUT3
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I0
+              (direction INPUT)
+            )
+            (port I1
+              (direction INPUT)
+            )
+            (port I2
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell IBUF
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell OBUF
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+  )
+
+  (library ThreeInputOrGate_lib
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell ThreeInputOrGate
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port i1
+              (direction INPUT)
+            )
+            (port i2
+              (direction INPUT)
+            )
+            (port i3
+              (direction INPUT)
+            )
+            (port gateOutput
+              (direction OUTPUT)
+            )
+            (designator "xc3s100e-4-cp132")
+            (property TYPE (string "ThreeInputOrGate") (owner "Xilinx"))
+            (property NLW_UNIQUE_ID (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_TAG (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_ALIAS (string "ThreeInputOrGate_ThreeInputOrGate") (owner "Xilinx"))
+          )
+          (contents
+            (instance gateOutput1
+              (viewRef view_1 (cellRef LUT3 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "FE") (owner "Xilinx"))
+            )
+            (instance (rename i1_IBUF_renamed_0 "i1_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename i2_IBUF_renamed_1 "i2_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename i3_IBUF_renamed_2 "i3_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename gateOutput_OBUF_renamed_3 "gateOutput_OBUF")
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (net gateOutput
+              (joined
+                (portRef gateOutput)
+                (portRef O (instanceRef gateOutput_OBUF_renamed_3))
+              )
+            )
+            (net gateOutput_OBUF
+              (joined
+                (portRef O (instanceRef gateOutput1))
+                (portRef I (instanceRef gateOutput_OBUF_renamed_3))
+              )
+            )
+            (net i1
+              (joined
+                (portRef i1)
+                (portRef I (instanceRef i1_IBUF_renamed_0))
+              )
+            )
+            (net i1_IBUF
+              (joined
+                (portRef I1 (instanceRef gateOutput1))
+                (portRef O (instanceRef i1_IBUF_renamed_0))
+              )
+            )
+            (net i2
+              (joined
+                (portRef i2)
+                (portRef I (instanceRef i2_IBUF_renamed_1))
+              )
+            )
+            (net i2_IBUF
+              (joined
+                (portRef I0 (instanceRef gateOutput1))
+                (portRef O (instanceRef i2_IBUF_renamed_1))
+              )
+            )
+            (net i3
+              (joined
+                (portRef i3)
+                (portRef I (instanceRef i3_IBUF_renamed_2))
+              )
+            )
+            (net i3_IBUF
+              (joined
+                (portRef I2 (instanceRef gateOutput1))
+                (portRef O (instanceRef i3_IBUF_renamed_2))
+              )
+            )
+          )
+      )
+    )
+  )
+
+  (design ThreeInputOrGate
+    (cellRef ThreeInputOrGate
+      (libraryRef ThreeInputOrGate_lib)
+    )
+    (property PART (string "xc3s100e-4-cp132") (owner "Xilinx"))
+  )
+)
+

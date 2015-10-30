@@ -5,19 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="718" delta="unknown" >"D:/Xilinx_projects/FourBitAdder/FourBitFullAdder.v" Line 31: Port connections cannot be mixed ordered and named
-</msg>
-
-<msg type="error" file="HDLCompiler" num="718" delta="unknown" >"D:/Xilinx_projects/FourBitAdder/FourBitFullAdder.v" Line 38: Port connections cannot be mixed ordered and named
-</msg>
-
-<msg type="error" file="HDLCompiler" num="718" delta="unknown" >"D:/Xilinx_projects/FourBitAdder/FourBitFullAdder.v" Line 45: Port connections cannot be mixed ordered and named
-</msg>
-
-<msg type="error" file="HDLCompiler" num="718" delta="unknown" >"D:/Xilinx_projects/FourBitAdder/FourBitFullAdder.v" Line 52: Port connections cannot be mixed ordered and named
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="unknown" >"D:/Xilinx_projects/FourBitAdder/FourBitFullAdder.v" Line 21: Module &lt;<arg fmt="%s" index="1">FourBitFullAdder</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="114" delta="unknown" >"D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FourBitAdder/FourBitFullAdder.v" Line 26: /* in comment
 </msg>
 
 </messages>

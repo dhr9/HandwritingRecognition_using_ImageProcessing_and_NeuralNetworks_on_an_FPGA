@@ -1,0 +1,240 @@
+#:C99    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   D:\GitHub\Handwriting_recognition_using_neural_nets_on_FPGA\Xilinx_projects\OR
+#Date/Time:
+#:T   Fri Oct 30 11:11:14 2015
+#------------------------------
+	#Reading ThreeInputOrGate.ncd...
+	#Loading device for application Rf_Device from file '3s100e.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "ThreeInputOrGate" is an NCD, version 3.2, device xc3s100e, package cp132, speed -4
+	#Design creation date: 2015.10.30.05.40.29
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+select site 'VCC_X11Y15'
+	#site "VCC_X11Y15",  type = VCC  (RPM grid X-1Y-1)
+	#4
+setattr main disable_draw on
+	#5
+setattr layer switch_boxes view on
+	#6
+setattr main disable_draw off
+	#Hint: change the visibility of more than one layer at a time by clicking on the apply button, clicking two or more layer buttons, and then clicking on the apply button again.
+	#7
+setattr main disable_draw on
+	#8
+setattr layer pips view on
+	#9
+setattr main disable_draw off
+	#10
+setattr main disable_draw on
+	#11
+setattr layer pinwires view on
+	#12
+setattr main disable_draw off
+	#13
+setattr main disable_draw on
+	#14
+setattr layer long_lines view on
+	#15
+setattr main disable_draw off
+	#16
+setattr main disable_draw on
+	#17
+setattr layer local_lines view on
+	#18
+setattr main disable_draw off
+	#19
+setattr main disable_draw on
+	#20
+setattr layer local_lines view off
+	#21
+setattr main disable_draw off
+	#22
+setattr main disable_draw on
+	#23
+setattr layer routes view on
+	#24
+setattr main disable_draw off
+	#25
+setattr main disable_draw on
+	#26
+setattr layer clock_regions view on
+	#27
+setattr main disable_draw off
+	#28
+setattr main disable_draw on
+	#29
+setattr layer text view on
+	#30
+setattr main disable_draw off
+	#31
+setattr main disable_draw on
+	#32
+setattr layer pinwires view off
+	#33
+setattr main disable_draw off
+	#34
+setattr main disable_draw on
+	#35
+setattr layer pinwires view on
+	#36
+setattr main disable_draw off
+	#37
+setattr main disable_draw on
+	#38
+setattr layer long_lines view off
+	#39
+setattr main disable_draw off
+	#40
+setattr main disable_draw on
+	#41
+setattr layer long_lines view on
+	#42
+setattr main disable_draw off
+	#43
+setattr main disable_draw on
+	#44
+setattr layer local_lines view off
+	#45
+setattr main disable_draw off
+	#46
+unselect -all
+	#47
+unselect -all
+	#48
+unselect -all
+	#49
+unselect -all
+	#50
+unselect -all
+	#51
+select wire 'OMUX(28712,-30551)'
+	#node = OMUX(28712,-30551)
+	#52
+unselect -all
+	#53
+unselect -all
+	#54
+select wire 'VCCOUT(28720,-28136)'
+	#node = VCCOUT(28720,-28136)
+	#55
+unselect -all
+	#56
+select wire 'VFULLHEX(30056,-30033)'
+	#node = VFULLHEX(30056,-30033)
+	#57
+unselect -all
+	#58
+select wire 'VFULLHEX(30056,-30033)'
+	#node = VFULLHEX(30056,-30033)
+	#59
+post block
+	#ERROR:FPGAEditor:79 - The "post block" command without any other arguments cannot
+	#be performed unless the selection contains only a single site
+	#or single component.  Change the selection and try again.
+	#60
+unselect -all
+	#61
+select wire 'VFULLHEX(30056,-30033)'
+	#node = VFULLHEX(30056,-30033)
+	#62
+unselect -all
+	#63
+select wire 'VFULLHEX(30056,-30033)'
+	#node = VFULLHEX(30056,-30033)
+	#64
+post block
+	#ERROR:FPGAEditor:79 - The "post block" command without any other arguments cannot
+	#be performed unless the selection contains only a single site
+	#or single component.  Change the selection and try again.
+	#65
+unselect -all
+	#66
+select wire 'VFULLHEX(30056,-30033)'
+	#node = VFULLHEX(30056,-30033)
+	#67
+unselect -all
+	#68
+select wire 'VFULLHEX(30056,-30033)'
+	#node = VFULLHEX(30056,-30033)
+	#69
+post block
+	#ERROR:FPGAEditor:79 - The "post block" command without any other arguments cannot
+	#be performed unless the selection contains only a single site
+	#or single component.  Change the selection and try again.
+	#70
+unselect -all
+	#71
+select wire 'VFULLHEX(30056,-30033)'
+	#node = VFULLHEX(30056,-30033)
+	#72
+unselect -all
+	#73
+select wire 'VFULLHEX(30421,-28944)'
+	#node = VFULLHEX(30421,-28944)
+	#74
+post block
+	#ERROR:FPGAEditor:79 - The "post block" command without any other arguments cannot
+	#be performed unless the selection contains only a single site
+	#or single component.  Change the selection and try again.
+	#75
+unselect -all
+	#76
+unselect -all
+	#77
+unselect -all
+	#78
+post attr
+	#Getting available speed grades of the device...
+	#79
+unpost main
+	#80
+unselect -all
+	#81
+unselect -all
+	#82
+unselect -all
+	#83
+setattr main disable_draw on
+	#84
+setattr layer sites view off
+	#85
+setattr main disable_draw off
+	#86
+setattr main disable_draw on
+	#87
+setattr layer sites view on
+	#88
+setattr main disable_draw off
+	#89
+setattr main disable_draw on
+	#90
+setattr layer switch_boxes view off
+	#91
+setattr main disable_draw off
+	#92
+setattr main disable_draw on
+	#93
+setattr layer switch_boxes view on
+	#94
+setattr main disable_draw off
+	#95
+setattr main disable_draw on
+	#96
+setattr layer switch_boxes view off
+	#97
+setattr main disable_draw off
+	#98
+setattr main disable_draw on
+	#99
+setattr layer switch_boxes view on
+	#100
+setattr main disable_draw off

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.36 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.77 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.36 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.80 secs
  
 --> Reading design: ThreeInputOrGate.prj
 
@@ -131,7 +131,6 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <ThreeInputOrGate>.
     Related source file is "ThreeInputOrGate.v".
-WARNING:Xst:647 - Input <i2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 Unit <ThreeInputOrGate> synthesized.
 
 
@@ -196,9 +195,9 @@ Design Statistics
 
 Cell Usage :
 # BELS                             : 1
-#      LUT2                        : 1
-# IO Buffers                       : 3
-#      IBUF                        : 2
+#      LUT3                        : 1
+# IO Buffers                       : 4
+#      IBUF                        : 3
 #      OBUF                        : 1
 =========================================================================
 
@@ -210,7 +209,7 @@ Selected Device : 3s100ecp132-4
  Number of Slices:                        1  out of    960     0%  
  Number of 4 input LUTs:                  1  out of   1920     0%  
  Number of IOs:                           4
- Number of bonded IOBs:                   3  out of     83     3%  
+ Number of bonded IOBs:                   4  out of     83     4%  
 
 ---------------------------
 Partition Resource Summary:
@@ -251,18 +250,18 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2 / 1
+  Total number of paths / destination ports: 3 / 1
 -------------------------------------------------------------------------
 Delay:               6.209ns (Levels of Logic = 3)
-  Source:            i1 (PAD)
+  Source:            i2 (PAD)
   Destination:       gateOutput (PAD)
 
-  Data Path: i1 to gateOutput
+  Data Path: i2 to gateOutput
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.218   0.595  i1_IBUF (i1_IBUF)
-     LUT2:I0->O            1   0.704   0.420  gateOutput1 (gateOutput_OBUF)
+     IBUF:I->O             1   1.218   0.595  i2_IBUF (i2_IBUF)
+     LUT3:I0->O            1   0.704   0.420  gateOutput1 (gateOutput_OBUF)
      OBUF:I->O                 3.272          gateOutput_OBUF (gateOutput)
     ----------------------------------------
     Total                      6.209ns (5.194ns logic, 1.015ns route)
@@ -271,14 +270,14 @@ Delay:               6.209ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.73 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.22 secs
  
 --> 
 
-Total memory usage is 290196 kilobytes
+Total memory usage is 290092 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

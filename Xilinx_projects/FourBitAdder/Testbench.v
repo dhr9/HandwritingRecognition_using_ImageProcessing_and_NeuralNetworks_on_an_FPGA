@@ -27,7 +27,6 @@ module Testbench;
 	// Inputs
 	reg [3:0] A;
 	reg [3:0] B;
-	reg Cin;
 
 	// Outputs
 	wire [3:0] Sum;
@@ -37,13 +36,7 @@ module Testbench;
 	integer i;
 	
 	// Instantiate the Unit Under Test (UUT)
-	FourBitFullAdder uut (
-		.A(A), 
-		.B(B), 
-		.Cin(Cin), 
-		.Sum(Sum), 
-		.Cout(Cout),
-	);
+	FourBitFullAdder uut (.A(A), .B(B), .Sum(Sum), .Cout(Cout) );
 
 	initial begin
 		// Initialize Inputs
@@ -56,16 +49,16 @@ module Testbench;
 //		#150 $finish;
 		A = 0;
 		B = 0;
-	
+
 	end
-	
+
 	initial
-			$monitor( "A(%b) + B(%b)  = carry sum(%b %b)",A ,B ,Cin ,Sum );
+			$monitor( "A(%b) + B(%b)  = carry sum(%b %b)",A ,B ,Cout ,Sum );
 	
 	always @ (A or B)
 		begin
-		for (i = 0 ; i < 16*16 ; i = i +i )
-			 #1 {A,B}= i;
+		for (i = 0 ; i < 16*16 ; i = i + 1)
+			 #10 {A,B}= i;
 		#10 $stop;
 		end
 		// Wait 100 ns for global reset to finish

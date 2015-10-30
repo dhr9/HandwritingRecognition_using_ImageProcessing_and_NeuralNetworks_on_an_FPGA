@@ -32,7 +32,8 @@ module TestBench;
 	// Outputs
 	wire Sum;
 	wire Cout;
-
+	
+	integer i;
 	// Instantiate the Unit Under Test (UUT)
 	FullAdder1Bit uut (
 		.A(A),
@@ -42,26 +43,22 @@ module TestBench;
 		.Cout(Cout)
 	);
 
-	initial begin
-		// Initialize Inputs
-		//A = 0; B = 0; Cin = 0;
-		//#50 A = 1; B = 1; Cin = 0;
-		//#50 A = 1; B = 1; Cin = 1;
-		A = 1'b0;
-		B = 1'b0;
-		Cin = 1'b0;
-		#16 $finish;
-	end
-	always #8 Cin = ~Cin;
-	always #4 A = ~A;
-	always #2 B = ~B;
-	
-	always @ (Sum,Cout)
-		$display( "time =%0t \tINPUT VALUES: \t A =%b B =%b CIN =%b \t output value SUM=%b COUT =%b ",$time,A,B,Cin,Sum,Cout);
-		// Wait 100 ns for global reset to finish
-		//always #100;
-      
-		// Add stimulus here
+  initial begin
+         // Initialize Inputs
+				A = 0;
+            B = 0;
+            Cin = 0;
+         end
 
-	
+   always @ ( A, B, Cin )
+          begin
+          // generate truth table
+          for ( i = 0; i < 8; i = i + 1 )
+          // every 10 ns set a, b, and cin to the binary rep. of i
+               #10 {A, B, Cin} = i;
+                        
+          // stop 10ns after last change of inputs
+               #10 $stop;
+			 end
+
 endmodule

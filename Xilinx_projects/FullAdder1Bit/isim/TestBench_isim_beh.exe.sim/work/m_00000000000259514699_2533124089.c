@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Xilinx_projects/FullAdder1Bit/FullAdder1Bit.v";
+static const char *ng0 = "D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FullAdder1Bit/FullAdder1Bit.v";
 
 
 
