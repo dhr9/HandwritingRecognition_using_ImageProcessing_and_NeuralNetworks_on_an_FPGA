@@ -4,3 +4,9 @@
 **/*.gise
 **/*.html
 **/*.log
+**/*.xmsgs
+**/*.xreport
+**/*.ini
+**/*.wdb
+**/*.cmd
+**/*.projectmgr

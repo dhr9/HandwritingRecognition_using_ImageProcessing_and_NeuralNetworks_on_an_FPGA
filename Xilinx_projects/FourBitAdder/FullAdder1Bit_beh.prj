@@ -1,4 +1,2 @@
 verilog work "../FullAdder1Bit/FullAdder1Bit.v"
-verilog work "FourBitFullAdder.v"
-verilog work "Testbench.v"
 verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

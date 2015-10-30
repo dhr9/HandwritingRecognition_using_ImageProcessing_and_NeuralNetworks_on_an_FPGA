@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="114" delta="unknown" >"D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FourBitAdder/FourBitFullAdder.v" Line 26: /* in comment
-</msg>
-
 </messages>
 

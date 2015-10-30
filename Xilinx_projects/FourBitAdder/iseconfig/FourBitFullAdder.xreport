@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-10-30T21:26:37</DateModified>
+  <DateModified>2015-10-30T21:33:56</DateModified>
   <ModuleName>FourBitFullAdder</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FourBitAdder/iseconfig/FourBitFullAdder.xreport</SavedFilePath>

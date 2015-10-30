@@ -11,7 +11,7 @@
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FourBitAdder/FourBitFullAdder.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FourBitAdder/Testbench.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FullAdder1Bit/FullAdder1Bit.v&quot; into library work</arg>
 </msg>
 
 </messages>
