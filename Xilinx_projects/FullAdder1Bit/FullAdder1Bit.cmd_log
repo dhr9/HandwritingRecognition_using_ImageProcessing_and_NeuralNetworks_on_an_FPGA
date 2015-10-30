@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FullAdder1Bit/FullAdder1Bit.xst" -ofn "D:/GitHub/Handwriting_recognition_using_neural_nets_on_FPGA/Xilinx_projects/FullAdder1Bit/FullAdder1Bit.syr" 

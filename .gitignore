@@ -4,7 +4,7 @@
 **/*.gise
 **/*.html
 **/*.log
-**/*.xmsgs
+#**/*.xmsgs
 **/*.xreport
 **/*.ini
 **/*.wdb

@@ -1,8 +1,0 @@
-xst -intstyle ise -ifn "D:/Xilinx_projects/try/D.xst" -ofn "D:/Xilinx_projects/try/D.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 D.ngc D.ngd  
-map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o D_map.ncd D.ngd D.pcf 
-par -w -intstyle ise -ol high -t 1 D_map.ncd D.ncd D.pcf 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc basys.ucf -p xc3s100e-cp132-5 D.ngc D.ngd  
-map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o D_map.ncd D.ngd D.pcf 
-par -w -intstyle ise -ol high -t 1 D_map.ncd D.ncd D.pcf 
-trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml D.twx D.ncd -o D.twr D.pcf -ucf basys.ucf 

@@ -1,2 +1,0 @@
-xaw2spl {-intstyle ise} D:/Xilinx_projects/FourBitAdder/ipcore_dir/try.xaw 
-spl2sym -intstyle ise -family spartan3e try.spl D:/Xilinx_projects/FourBitAdder/try.sym 

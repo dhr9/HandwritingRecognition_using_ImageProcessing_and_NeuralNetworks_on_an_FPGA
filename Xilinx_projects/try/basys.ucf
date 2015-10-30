@@ -1,3 +1,0 @@
-NET "D" LOC = "P11";
-NET "Q" LOC = "M5";
-NET "clk" LOC = "B8";

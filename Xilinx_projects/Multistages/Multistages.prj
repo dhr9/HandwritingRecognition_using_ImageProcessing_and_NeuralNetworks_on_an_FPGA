@@ -1,2 +1,0 @@
-verilog work "../SingleStage/SingleStage.v"
-verilog work "Multistages.v"

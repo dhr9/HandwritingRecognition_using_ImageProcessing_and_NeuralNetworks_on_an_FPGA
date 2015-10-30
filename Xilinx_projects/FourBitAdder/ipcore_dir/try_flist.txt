@@ -1,2 +1,0 @@
-# Output products list for <try>
-try_flist.txt
