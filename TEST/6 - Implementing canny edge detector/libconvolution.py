@@ -1,11 +1,15 @@
-import setup
 import ctypes
 import numpy
 import locate_file
+import setup
+import sys
 
 working_directory = locate_file.locate_file()
 
-_convolution_ = ctypes.CDLL('convolution.dll')
+if sys.platform == 'darwin' : 
+    _convolution_ = ctypes.cdll.LoadLibrary(working_directory + 'convolution.so')
+else : 
+    _convolution_ = ctypes.CDLL('convolution.dll')
 
 class two_d_array() : 
     
@@ -17,10 +21,10 @@ class two_d_array() :
             
             return param
         else : 
-            raise TypeError('type %s not supported' %typename)
+            raise TypeError('type {0} not supported'.format(typename))
     
     def from_ndarray(self,param) : 
-        c_array = numpy.ascontiguousarray(param,dtype=numpy.uint32)
+        c_array = numpy.ascontiguousarray(param,dtype=numpy.int32)
         pointer = c_array.ctypes
         return pointer
     
@@ -35,16 +39,20 @@ two_d_array_ = two_d_array()
 _convolution_.convolution.argtypes = [two_d_array_,two_d_array_,ctypes.c_int,ctypes.c_int,ctypes.c_int,ctypes.c_int]
 _convolution_.convolution.restype = ctypes.c_void_p
 
-def convolution(image,kernel) :
+def convolution(image,kernel,flag=True) :
+
     kernel_normalizer = kernel[0]
     kernel = kernel[1] 
     '''
     ADD BORDER TO IMAGE
     '''
-    image_c_array = numpy.ascontiguousarray(image,dtype=numpy.uint32)
-    kernel_c_array = numpy.ascontiguousarray(kernel,dtype=numpy.uint32)
+    image_c_array = numpy.ascontiguousarray(image,dtype=numpy.int32)
+    kernel_c_array = numpy.ascontiguousarray(kernel,dtype=numpy.int32)
     _convolution_.convolution(image_c_array,kernel_c_array,len(image[0]),len(image),len(kernel),kernel_normalizer)
-    '''
-    REMOVE BORDER FROM IMAGE
-    '''
-    return numpy.ascontiguousarray(image_c_array,dtype=numpy.uint8)
+
+    #remove border from the image
+    image_c_array =[element[:-len(kernel)+1] for element in image_c_array][:-len(kernel)+1]
+    if flag : 
+        return numpy.ascontiguousarray(image_c_array,dtype=numpy.uint8)
+    else :
+        return numpy.ascontiguousarray(image_c_array,dtype=numpy.int32)
