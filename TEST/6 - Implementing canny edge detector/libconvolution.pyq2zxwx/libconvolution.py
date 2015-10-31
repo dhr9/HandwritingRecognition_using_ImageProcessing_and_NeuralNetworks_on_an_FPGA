@@ -4,9 +4,10 @@ import numpy
 import locate_file
 
 working_directory = locate_file.locate_file()
-
-_convolution_ = ctypes.CDLL('convolution.dll')
-
+try:
+    _convolution_ = ctypes.cdll.LoadLibrary(working_directory + 'convolution.dll')
+except WindowsError:
+    break
 class two_d_array() : 
     
     def from_param(self,param) : 
