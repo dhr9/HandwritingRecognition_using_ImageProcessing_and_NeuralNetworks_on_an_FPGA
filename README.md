@@ -1,7 +1,8 @@
 # Handwriting_recognition_using_neural_nets_on_FPGA
 ##Final year project
+######Collaborators:   Riyansh Karani, Dhruv Reshamwala, Akash Rana, Kishore Saldanha
 
-This is an attempt to use neural networks to recognise alphabets using Image processing both on Python as well as on an FPGA board.
+This project involves a neural network and image processing based system for handwriting recognition. We are working on an FPGA implementation for the same.
 
 This is an **incomplete project** as of now.
 
