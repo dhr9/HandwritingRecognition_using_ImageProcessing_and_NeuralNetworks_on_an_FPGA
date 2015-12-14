@@ -1,4 +1,4 @@
-# Handwriting_recognition_using_neural_nets_on_FPGA
+# Handwriting Recognition using Image Processing and Neural Networks on an FPGA
 ##Final year project
 ######Collaborators:   Riyansh Karani, Dhruv Reshamwala, Akash Rana, Kishore Saldanha
 
