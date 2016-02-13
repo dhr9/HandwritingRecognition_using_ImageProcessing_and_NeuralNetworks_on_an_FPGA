@@ -21,15 +21,19 @@ class Network(object):
     def SGD(self, training_data, epochs, mini_batch_size, eta, test_data=None):
         if test_data: n_test = len(test_data)
         n = len(training_data)
+        efficiency_list = []  ##Dhr
         for j in xrange(epochs):
             random.shuffle(training_data)
             mini_batches = [ training_data[k:k+mini_batch_size] for k in xrange(0, n, mini_batch_size)]
             for mini_batch in mini_batches:
                 self.update_mini_batch(mini_batch, eta)
             if test_data:
-                print "Epoch {0}: {1} / {2}".format(j, self.evaluate(test_data), n_test)
+                no_of_terms_correct = self.evaluate(test_data)  ##Dhr
+                efficiency_list.append(no_of_terms_correct)     ##Dhr
+                # print "Epoch {0}: {1} / {2}".format(j, no_of_terms_correct, n_test)
             else:
                 print "Epoch {0} complete".format(j)
+        return efficiency_list ##Dhr
 
     def update_mini_batch(self, mini_batch, eta):
         nabla_b = [np.zeros(b.shape) for b in self.biases]
