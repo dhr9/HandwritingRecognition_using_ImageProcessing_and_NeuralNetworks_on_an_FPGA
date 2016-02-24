@@ -6,9 +6,9 @@ import network
 def train(no_of_hidden_neurons,mini_batch_size,eta):
 	# creating a network (loading a class)
 	net = network.Network([784, no_of_hidden_neurons, 10])
-
+	
 	# start training with 30 epochs, mini_batch_size = 10 , eta = 3
-	no_of_epochs = 1
+	no_of_epochs = 5
 	# mini_batch_size = 20
 	# eta = 50
 
@@ -23,4 +23,7 @@ def train(no_of_hidden_neurons,mini_batch_size,eta):
 
 trained_network = train(30,20,10)
 
-print(trained_network.weights)
+save = network.numpy_2.get_all_information
+
+save(trained_network.biases,"biases")
+save(trained_network.weights,"weights")
