@@ -1,9 +1,9 @@
 ## Handwriting Recognition using Image Processing and Neural Networks on an FPGA
 ## Final year project
 Collaborators:   
-- Riyansh Karani 
-- Dhruv Reshamwala
-- Akash Rana 
+- [Riyansh Karani](https://github.com/RiyanshKarani011235)
+- [Dhruv Reshamwala](https://github.com/dhr9)
+- [Akash Rana](https://github.com/akash9182)
 - Kishore Saldanha
 
 This project involves a neural network and image processing based system for handwriting recognition. We are working on an FPGA implementation for the same.
